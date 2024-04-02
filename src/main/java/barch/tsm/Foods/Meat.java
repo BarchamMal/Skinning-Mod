@@ -3,6 +3,8 @@ package barch.tsm.Foods;
 import barch.tsm.Glue.ItemGrouped;
 import barch.tsm.Glue.ItemGrouper;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -22,6 +24,8 @@ public class Meat {
     public static final FoodComponent COOKED_SAUSAGE_FOOD = new FoodComponent.Builder().meat().hunger(3).saturationModifier(5).build();
     public static final FoodComponent RARE_MEAT_FOOD = new FoodComponent.Builder().meat().hunger(1).saturationModifier(.5f).build();
     public static final FoodComponent COOKED_RARE_MEAT_FOOD = new FoodComponent.Builder().meat().hunger(7).saturationModifier(10).build();
+    public static final FoodComponent POISON_MEAT_FOOD = new FoodComponent.Builder().meat().hunger(1).saturationModifier(.5f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, 2), 0.9f).build();
+    public static final FoodComponent COOKED_TOXIC_MEAT_FOOD = new FoodComponent.Builder().meat().hunger(7).saturationModifier(10).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, 1), 0.4f).build();
 
 
     public static final Item CHICKEN_LEG = createFood(GROUND_MEAT_FOOD);
@@ -49,6 +53,24 @@ public class Meat {
     public static final Item COOKED_HAM = createFood(COOKED_RARE_MEAT_FOOD);
     public static final Item BACON = createFood(SAUSAGE_FOOD);
     public static final Item COOKED_BACON = createFood(COOKED_SAUSAGE_FOOD);
+
+    public static final Item SALMON_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_SALMON_STEAK = createFood(HAMBURGER_FOOD);
+    public static final Item COD_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_COD_STEAK = createFood(HAMBURGER_FOOD);
+    public static final Item TROPICAL_FISH_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_TROPICAL_FISH_STEAK = createFood(HAMBURGER_FOOD);
+    public static final Item PUFFERFISH_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_PUFFERFISH_STEAK = createFood(HAMBURGER_FOOD);
+    public static final Item POISONOUS_FISH_STEAK = createFood(POISON_MEAT_FOOD);
+    public static final Item COOKED_POISONOUS_FISH_STEAK = createFood(COOKED_TOXIC_MEAT_FOOD);
+    public static final Item TURTLE_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_TURTLE_STEAK = createFood(HAMBURGER_FOOD);
+
+    public static final Item SQUID_TENTACLE = createFood(RARE_MEAT_FOOD);
+    public static final Item COOKED_SQUID_TENTACLE = createFood(COOKED_RARE_MEAT_FOOD);
+    public static final Item GLOW_SQUID_TENTACLE = createFood(RARE_MEAT_FOOD);
+    public static final Item COOKED_GLOW_SQUID_TENTACLE = createFood(COOKED_RARE_MEAT_FOOD);
 
     private static Item createFood(FoodComponent foodComponent) {
         return new Item(new FabricItemSettings().food(foodComponent));
@@ -87,6 +109,24 @@ public class Meat {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bacon"), BACON);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_bacon"), COOKED_BACON);
 
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "salmon_steak"), SALMON_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_salmon_steak"), COOKED_SALMON_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cod_steak"), COD_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_cod_steak"), COOKED_COD_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tropical_fish_steak"), TROPICAL_FISH_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_tropical_fish_steak"), COOKED_TROPICAL_FISH_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "pufferfish_steak"), PUFFERFISH_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_pufferfish_steak"), COOKED_PUFFERFISH_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "poison_fish_steak"), POISONOUS_FISH_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_poison_fish_steak"), COOKED_POISONOUS_FISH_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "turtle_steak"), TURTLE_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_turtle_steak"), COOKED_TURTLE_STEAK);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "squid_tentacle"), SQUID_TENTACLE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_squid_tentacle"), COOKED_SQUID_TENTACLE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "glow_squid_tentacle"), GLOW_SQUID_TENTACLE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_glow_squid_tentacle"), COOKED_GLOW_SQUID_TENTACLE);
+
     }
 
     public static void groupItems() {
@@ -116,6 +156,25 @@ public class Meat {
         ItemGrouper.GroupItem(COOKED_HAM, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, HAM)});
         ItemGrouper.GroupItem(BACON, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_HAM)});
         ItemGrouper.GroupItem(COOKED_BACON, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, BACON)});
+
+
+        ItemGrouper.GroupItem(SALMON_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_BACON)});
+        ItemGrouper.GroupItem(COOKED_SALMON_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, SALMON_STEAK)});
+        ItemGrouper.GroupItem(COD_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_SALMON_STEAK)});
+        ItemGrouper.GroupItem(COOKED_COD_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COD_STEAK)});
+        ItemGrouper.GroupItem(TROPICAL_FISH_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_COD_STEAK)});
+        ItemGrouper.GroupItem(COOKED_TROPICAL_FISH_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, TROPICAL_FISH_STEAK)});
+        ItemGrouper.GroupItem(PUFFERFISH_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_TROPICAL_FISH_STEAK)});
+        ItemGrouper.GroupItem(COOKED_PUFFERFISH_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, PUFFERFISH_STEAK)});
+        ItemGrouper.GroupItem(POISONOUS_FISH_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_PUFFERFISH_STEAK)});
+        ItemGrouper.GroupItem(COOKED_POISONOUS_FISH_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, POISONOUS_FISH_STEAK)});
+
+        ItemGrouper.GroupItem(TURTLE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_POISONOUS_FISH_STEAK)});
+        ItemGrouper.GroupItem(COOKED_TURTLE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, TURTLE_STEAK)});
+        ItemGrouper.GroupItem(SQUID_TENTACLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, TURTLE_STEAK)});
+        ItemGrouper.GroupItem(COOKED_SQUID_TENTACLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, SQUID_TENTACLE)});
+        ItemGrouper.GroupItem(GLOW_SQUID_TENTACLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_SQUID_TENTACLE)});
+        ItemGrouper.GroupItem(COOKED_GLOW_SQUID_TENTACLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GLOW_SQUID_TENTACLE)});
 
     }
 

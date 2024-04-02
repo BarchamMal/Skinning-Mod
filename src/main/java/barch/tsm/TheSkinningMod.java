@@ -1,5 +1,6 @@
 package barch.tsm;
 
+import barch.tsm.Carcases.AnimalByproducts;
 import barch.tsm.Carcases.Carcases;
 import barch.tsm.Foods.Meat;
 import net.fabricmc.api.ModInitializer;
@@ -15,6 +16,7 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static barch.tsm.Carcases.AnimalByproducts.FISH_SCALES;
 import static barch.tsm.Carcases.Carcases.COW_HIDE;
 import static barch.tsm.Carcases.Carcases.MEATLESS_COW_CARCASE;
 
@@ -29,6 +31,7 @@ public class TheSkinningMod implements ModInitializer {
 
 	public static final RegistryKey<ItemGroup> TSM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(NAMESPACE, "tsm"));
 	public static final RegistryKey<ItemGroup> CARCASES_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(NAMESPACE, "carcases"));
+	public static final RegistryKey<ItemGroup> BYPRODUCTS_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(NAMESPACE, "byproducts"));
 
 
 
@@ -40,6 +43,11 @@ public class TheSkinningMod implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 
+		Registry.register(Registries.ITEM_GROUP, BYPRODUCTS_GROUP, FabricItemGroup.builder()
+				.icon(() -> new ItemStack(FISH_SCALES))
+				.displayName(Text.translatable("itemGroup."+NAMESPACE+".animal_byproducts"))
+				.build());
+				
 		Registry.register(Registries.ITEM_GROUP, TSM_GROUP, FabricItemGroup.builder()
 				.icon(() -> new ItemStack(COW_HIDE))
 				.displayName(Text.translatable("itemGroup."+NAMESPACE+".tsm"))
@@ -51,7 +59,9 @@ public class TheSkinningMod implements ModInitializer {
 				.build());
 
 
+
 		Carcases.onInitialize();
+		AnimalByproducts.onInitialize();
 		Meat.registerAll();
 
 

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "tsm:cod_steak"
+  },
+  "result": "tsm:cooked_cod_steak"
+}

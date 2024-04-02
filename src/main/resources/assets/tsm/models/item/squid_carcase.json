@@ -1,0 +1,7 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "tsm:item/t_sq_c",
+	"textures": {
+		"0": "tsm:item/carcase/squid/squid_carcase"
+	}
+}
