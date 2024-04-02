@@ -21,7 +21,7 @@
   + A: For another thing, things are done a bit more realistic. i.e. you get appropriate amounts of food from animals, bones or bonemeal from animals, byproducts like scutes from turtles or spikes from pufferfish.
 
  - Q: May I use this mod in my modpack?
- - A: Well, it's not on curse forge, but if you want to compile it yourself and use it anyways be my guest. Just credit me and provide a link to this repo.
+ - A: Well, it's not on Curseforge, but if you want to compile it yourself and use it anyways be my guest. Just credit me and provide a link to this repo.
 
  + Q: Will you port this mod to X version?
  + A: If X is before 1.20.4 then no, I don't plan to.
@@ -56,5 +56,5 @@ Fork the repo, add the lang file, make a PR. And I will probably merge it withou
 
 ## Credits
 Why are these at the end of the README?
-Art: BarchamMal
-Code: BarchamMal
+- Art: BarchamMal
+- Code: BarchamMal
