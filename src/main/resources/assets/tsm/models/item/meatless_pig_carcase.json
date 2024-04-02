@@ -1,0 +1,8 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "tsm:item/t_p_c",
+	"texture_size": [64, 32],
+	"textures": {
+		"0": "tsm:item/carcase/pig/meatless_pig_carcase"
+	}
+}

@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "barch.tsm.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ChickenEntityMixin",
+    "CowEntityMixin",
+    "PigEntityMixin",
+    "SheepEntityMixin",
+    "TheSkinningModMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}

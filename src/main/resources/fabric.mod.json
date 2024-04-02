@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "the-skinning-mod",
+	"version": "${version}",
+	"name": "The Skinning Mod",
+	"description": "A Lord of the Rings mod.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/the-skinning-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "barch.tsm.TheSkinningMod"
+		],
+		"client": [
+			"barch.tsm.TheSkinningModClient"
+		]
+	},
+	"mixins": [
+		"the-skinning-mod.mixins.json",
+		{
+			"config": "the-skinning-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

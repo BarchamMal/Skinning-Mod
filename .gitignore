@@ -1,0 +1,9 @@
+
+build/
+.gradle/
+.idea/
+run/
+*.DS_Store
+*.blend
+*.blend1
+src/main/resources/assets/tsm/textures/item/templates/

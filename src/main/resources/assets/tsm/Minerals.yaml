@@ -1,0 +1,76 @@
+Metal-Gem:
+  - Mineral Ore
+  - ...
+
+  - Mineral Name
+  - ...
+  - Description
+  - ...
+
+Iron:
+  - Mineral: Ferrium
+
+  - Metal-Gem: Iron
+
+  - Description: A hard gray metal, found all over the world, especially in the Iron Hills.
+  
+Copper:
+  - Mineral: Cyprium
+
+  - Metal-Gem: Copper
+
+  - Description: A soft red-orange metal, found all over the world, especially in Rhûn.
+
+Tin:
+  - Mineral: Cassiterium
+
+  - Metal-Gem: Tin
+
+  - Description: A silvery-gray metal, found all over the world, especially in Rhûn
+
+Bronze:
+  - Mineral: None
+
+  - Metal-Gem: Tin
+  - Metal-Gem: Copper
+
+  - Description: A hard dark orange metal made from Copper and small amounts of Tin, used mostly in Rhûn.
+
+Celebril:
+  - Mineral: Celebrilite
+
+  - Metal-Gem: Celebril
+
+  - Description: A soft white metal, found deep underground in the elven woods.
+
+Elven Steel:
+  - Mineral: None
+
+  - Metal-Gem: Celibril
+  - Metal-Gem: Iron
+  
+  - Description: A hard whitish metal made from Iron and Celebril.
+
+Galvorn:
+  - Mineral: None
+
+  - Metal-Gem: Copper
+  - Metal-Gem: Celebril
+  - Metal-Gem: Iron
+
+  - Description: A black, shining, extremely hard metal, though soft when heated, made by alloying Copper and Elven Steel.
+
+Morduril:
+  - Mineral: Mordurilium
+
+  - Metal-Gem: Morduril
+
+  - Description: A very soft black metal found in places where orcs dwell.
+
+Orc Steel:
+  - Mineral: None
+  
+  - Metal-Gem: Morduril
+  - Metal-Gem: Iron
+
+  - Description: A shining black-red metal made as a mixture of Iron and Morduril.

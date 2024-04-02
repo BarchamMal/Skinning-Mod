@@ -1,0 +1,43 @@
+{
+    "item.tsm.chicken_leg": "Chicken Leg",
+    "item.tsm.cooked_chicken_leg": "Cooked Chicken Leg",
+    "item.tsm.chicken_wing": "Chicken Wing",
+    "item.tsm.cooked_chicken_wing": "Cooked Chicken Wing",
+    "item.tsm.ground_beef": "Ground Beef",
+    "item.tsm.cooked_ground_beef": "Hamburger",
+    "item.tsm.ground_mutton": "Ground Mutton",
+    "item.tsm.cooked_ground_mutton": "Mutton Hamburger",
+    "item.tsm.ground_pork": "Ground Pork",
+    "item.tsm.cooked_ground_pork": "Pork Hamburger",
+    "item.tsm.liver": "Liver",
+    "item.tsm.cooked_liver": "Cooked Liver",
+    "item.tsm.rib": "Rib",
+    "item.tsm.cooked_rib": "Cooked Rib",
+    "item.tsm.tongue": "Tongue",
+    "item.tsm.cooked_tongue": "Cooked Tongue",
+    "item.tsm.sausage": "Sausage",
+    "item.tsm.cooked_sausage": "Cooked Sausage",
+    "item.tsm.ham": "Ham",
+    "item.tsm.cooked_ham": "Cooked Ham",
+    "item.tsm.bacon": "Bacon",
+    "item.tsm.cooked_bacon": "Cooked Bacon",
+
+    "item.tsm.cow_hide": "Cow Hide",
+    "item.tsm.soft_hide": "Soft Hide",
+    "item.tsm.pig_carcase": "Dead Pig",
+    "item.tsm.skinless_pig_carcase": "Skinned Dead Pig",
+    "item.tsm.meatless_pig_carcase": "Pig Skeleton",
+    "item.tsm.chicken_carcase": "Dead Chicken",
+    "item.tsm.skinless_chicken_carcase": "Plucked Dead Chicken",
+    "item.tsm.meatless_chicken_carcase": "Chicken Skeleton",
+    "item.tsm.sheep_carcase": "Dead Sheep",
+    "item.tsm.skinless_sheep_carcase": "Skinned Dead Sheep",
+    "item.tsm.meatless_sheep_carcase": "Sheep Skeleton",
+    "item.tsm.cow_carcase": "Dead Cow",
+    "item.tsm.skinless_cow_carcase": "Skinned Dead Cow",
+    "item.tsm.meatless_cow_carcase": "Cow Skeleton",
+
+    "itemGroup.tsm.carcases": "Carcases"
+
+
+}
