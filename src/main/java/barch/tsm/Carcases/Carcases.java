@@ -29,6 +29,11 @@ public class Carcases {
             new Identifier(NAMESPACE, "carcases/soft_hide"),
             Items.AIR
     );
+    public static final CarcaseItem BEAR_HIDE = new CarcaseItem(
+            new FabricItemSettings(),
+            new Identifier(NAMESPACE, "carcases/bear_hide"),
+            Items.AIR
+    );
 
 //                               COW
 // ================================================================>
@@ -219,6 +224,44 @@ public class Carcases {
             new Identifier(NAMESPACE, "carcases/glow_squid_carcase"),
             Items.AIR
     );
+//                            POLAR BEAR
+// ================================================================>
+
+    public static final CarcaseItem MEATLESS_POLARBEAR_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new Identifier(NAMESPACE, "carcases/meatless_polarbear_carcase"),
+            Items.AIR
+    );
+    public static final CarcaseItem SKINLESS_POLARBEAR_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new Identifier(NAMESPACE, "carcases/skinless_polarbear_carcase"),
+            MEATLESS_POLARBEAR_CARCASE
+    );
+    public static final CarcaseItem POLARBEAR_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new Identifier(NAMESPACE, "carcases/polarbear_carcase"),
+            SKINLESS_POLARBEAR_CARCASE
+    );
+
+//                              PANDA
+// ================================================================>
+
+    public static final CarcaseItem MEATLESS_PANDA_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new Identifier(NAMESPACE, "carcases/meatless_panda_carcase"),
+            Items.AIR
+    );
+    public static final CarcaseItem SKINLESS_PANDA_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new Identifier(NAMESPACE, "carcases/skinless_panda_carcase"),
+            MEATLESS_PANDA_CARCASE
+    );
+    public static final CarcaseItem PANDA_CARCASE = new CarcaseItem(
+            new FabricItemSettings(),
+            new Identifier(NAMESPACE, "carcases/panda_carcase"),
+            SKINLESS_PANDA_CARCASE
+    );
+
 
 
 
@@ -228,6 +271,7 @@ public class Carcases {
 
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cow_hide"), COW_HIDE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "soft_hide"), SOFT_HIDE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bear_hide"), BEAR_HIDE);
 
 
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_cow_carcase"), MEATLESS_COW_CARCASE);
@@ -270,12 +314,22 @@ public class Carcases {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "squid_carcase"), SQUID_CARCASE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "glow_squid_carcase"), GLOW_SQUID_CARCASE);
 
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_polarbear_carcase"), MEATLESS_POLARBEAR_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "skinless_polarbear_carcase"), SKINLESS_POLARBEAR_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "polarbear_carcase"), POLARBEAR_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_panda_carcase"), MEATLESS_PANDA_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "skinless_panda_carcase"), SKINLESS_PANDA_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "panda_carcase"), PANDA_CARCASE);
+
+
 
 
 
 
         ItemGrouper.GroupItem(COW_HIDE, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, Items.LEATHER)});
         ItemGrouper.GroupItem(SOFT_HIDE, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, COW_HIDE)});
+        ItemGrouper.GroupItem(BEAR_HIDE, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, BEAR_HIDE)});
 
 
         ItemGrouper.GroupItem(COW_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, Items.AIR)});
@@ -321,6 +375,15 @@ public class Carcases {
 
         ItemGrouper.GroupItem(SQUID_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, TURTLE_SHELL)});
         ItemGrouper.GroupItem(GLOW_SQUID_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SQUID_CARCASE)});
+
+        ItemGrouper.GroupItem(POLARBEAR_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, GLOW_SQUID_CARCASE)});
+        ItemGrouper.GroupItem(SKINLESS_POLARBEAR_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, POLARBEAR_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_POLARBEAR_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SKINLESS_POLARBEAR_CARCASE)});
+
+        ItemGrouper.GroupItem(PANDA_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_POLARBEAR_CARCASE)});
+        ItemGrouper.GroupItem(SKINLESS_PANDA_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, PANDA_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_PANDA_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SKINLESS_PANDA_CARCASE)});
+
 
     }
 

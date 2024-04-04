@@ -72,6 +72,12 @@ public class Meat {
     public static final Item GLOW_SQUID_TENTACLE = createFood(RARE_MEAT_FOOD);
     public static final Item COOKED_GLOW_SQUID_TENTACLE = createFood(COOKED_RARE_MEAT_FOOD);
 
+
+    public static final Item BEAR_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_BEAR_STEAK = createFood(HAMBURGER_FOOD);
+    public static final Item GROUND_BEAR = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_GROUND_BEAR = createFood(HAMBURGER_FOOD);
+
     private static Item createFood(FoodComponent foodComponent) {
         return new Item(new FabricItemSettings().food(foodComponent));
     }
@@ -127,6 +133,11 @@ public class Meat {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "glow_squid_tentacle"), GLOW_SQUID_TENTACLE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_glow_squid_tentacle"), COOKED_GLOW_SQUID_TENTACLE);
 
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bear_steak"), BEAR_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_bear_steak"), COOKED_BEAR_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ground_bear"), GROUND_BEAR);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_ground_bear"), COOKED_GROUND_BEAR);
+
     }
 
     public static void groupItems() {
@@ -175,6 +186,11 @@ public class Meat {
         ItemGrouper.GroupItem(COOKED_SQUID_TENTACLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, SQUID_TENTACLE)});
         ItemGrouper.GroupItem(GLOW_SQUID_TENTACLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_SQUID_TENTACLE)});
         ItemGrouper.GroupItem(COOKED_GLOW_SQUID_TENTACLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GLOW_SQUID_TENTACLE)});
+
+        ItemGrouper.GroupItem(BEAR_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_GLOW_SQUID_TENTACLE)});
+        ItemGrouper.GroupItem(COOKED_BEAR_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, BEAR_STEAK)});
+        ItemGrouper.GroupItem(GROUND_BEAR, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_BEAR_STEAK)});
+        ItemGrouper.GroupItem(COOKED_GROUND_BEAR, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GROUND_BEAR)});
 
     }
 

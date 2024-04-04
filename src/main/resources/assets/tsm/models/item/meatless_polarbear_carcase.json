@@ -1,0 +1,8 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "tsm:item/t_po_c",
+	"texture_size": [128, 64],
+	"textures": {
+		"0": "tsm:item/carcase/polarbear/meatless_polarbear_carcase"
+	}
+}

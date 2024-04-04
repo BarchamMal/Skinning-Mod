@@ -36,8 +36,16 @@ liver,
 rib,
 tongue,
 sausage,
-ham,
-bacon
+salmon_steak,
+cod_steak,
+tropical_fish_steak,
+pufferfish_steak,
+poison_fish_steak,
+glow_squid_tentacle,
+squid_tentacle,
+bear_steak,
+ground_bear,
+turtle_steak
 """.replace("\n", "").split(',')
 
 for food in foods:

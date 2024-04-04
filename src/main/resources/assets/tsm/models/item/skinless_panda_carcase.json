@@ -1,0 +1,8 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "tsm:item/t_pa_c",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "tsm:item/carcase/panda/skinless_panda_carcase"
+	}
+}
