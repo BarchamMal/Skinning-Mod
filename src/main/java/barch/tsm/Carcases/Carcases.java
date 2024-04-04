@@ -17,208 +17,209 @@ import static barch.tsm.Carcases.AnimalByproducts.*;
 public class Carcases {
 
     //                              HIDE
-    // ================================================================>
+// ================================================================>
 
     public static final CarcaseItem COW_HIDE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.LEATHER, 32)},
+            new Identifier(NAMESPACE, "carcases/cow_hide"),
             Items.AIR
     );
     public static final CarcaseItem SOFT_HIDE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.LEATHER, 8)},
+            new Identifier(NAMESPACE, "carcases/soft_hide"),
             Items.AIR
     );
 
-    //                               COW
-    // ================================================================>
+//                               COW
+// ================================================================>
 
     public static final CarcaseItem MEATLESS_COW_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.BONE, 12)},
+            new Identifier(NAMESPACE, "carcases/meatless_cow_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_COW_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.BEEF, 32), new ItemCut(RIB, 2), new ItemCut(TONGUE, 1), new ItemCut(LIVER, 1), new ItemCut(GROUND_BEEF, 32)},
+            new Identifier(NAMESPACE, "carcases/skinless_cow_carcase"),
             MEATLESS_COW_CARCASE
     );
     public static final CarcaseItem COW_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(COW_HIDE, 1)},
+            new Identifier(NAMESPACE, "carcases/cow_carcase"),
             SKINLESS_COW_CARCASE
     );
 
-    //                             SHEEP
-    // ================================================================>
+//                             SHEEP
+// ================================================================>
 
     public static final CarcaseItem MEATLESS_SHEEP_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.BONE, 8)},
+            new Identifier(NAMESPACE, "carcases/meatless_sheep_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_SHEEP_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.MUTTON, 24), new ItemCut(RIB, 2), new ItemCut(GROUND_MUTTON, 24)},
+            new Identifier(NAMESPACE, "carcases/skinless_sheep_carcase"),
             MEATLESS_SHEEP_CARCASE
     );
     public static final CarcaseItem SHEEP_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(SOFT_HIDE, 1)},
+            new Identifier(NAMESPACE, "carcases/sheep_carcase"),
             SKINLESS_SHEEP_CARCASE
     );
 
-    //                             CHICKEN
-    // ================================================================>
+//                             CHICKEN
+// ================================================================>
 
     public static final CarcaseItem MEATLESS_CHICKEN_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.BONE, 2), new ItemCut(Items.BONE_MEAL, 3)},
+            new Identifier(NAMESPACE, "carcases/meatless_chicken_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_CHICKEN_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.CHICKEN, 1), new ItemCut(CHICKEN_LEG, 2), new ItemCut(CHICKEN_WING, 2)},
+            new Identifier(NAMESPACE, "carcases/skinless_chicken_carcase"),
             MEATLESS_CHICKEN_CARCASE
     );
     public static final CarcaseItem CHICKEN_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.FEATHER, 32)},
+            new Identifier(NAMESPACE, "carcases/chicken_carcase"),
             SKINLESS_CHICKEN_CARCASE
     );
 
-    //                               PIG
-    // ================================================================>
+//                               PIG
+// ================================================================>
 
     public static final CarcaseItem MEATLESS_PIG_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.BONE, 8)},
+            new Identifier(NAMESPACE, "carcases/meatless_pig_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_PIG_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.PORKCHOP, 24), new ItemCut(RIB, 2), new ItemCut(GROUND_PORK, 24), new ItemCut(BACON, 8), new ItemCut(HAM, 4)},
+            new Identifier(NAMESPACE, "carcases/skinless_pig_carcase"),
             MEATLESS_PIG_CARCASE
     );
     public static final CarcaseItem PIG_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(SOFT_HIDE, 1)},
+            new Identifier(NAMESPACE, "carcases/pig_carcase"),
             SKINLESS_PIG_CARCASE
     );
 
-    //                             SALMON
-    // ================================================================>
+//                             SALMON
+// ================================================================>
 
     public static final CarcaseItem MEATLESS_SALMON_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.BONE, 2), new ItemCut(Items.BONE_MEAL, 3)},
+            new Identifier(NAMESPACE, "carcases/meatless_salmon_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SCALED_SALMON_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(SALMON_STEAK, 8), new ItemCut(INTESTINE, 2)},
+            new Identifier(NAMESPACE, "carcases/scaled_salmon_carcase"),
             MEATLESS_SALMON_CARCASE
     );
     public static final CarcaseItem SALMON_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(FISH_SCALES, 8)},
+            new Identifier(NAMESPACE, "carcases/salmon_carcase"),
             SCALED_SALMON_CARCASE
     );
 
-    //                                COD
-    // ================================================================>
+//                                COD
+// ================================================================>
 
     public static final CarcaseItem MEATLESS_COD_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.BONE, 2), new ItemCut(Items.BONE_MEAL, 3)},
+            new Identifier(NAMESPACE, "carcases/meatless_cod_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SCALED_COD_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(COD_STEAK, 8), new ItemCut(INTESTINE, 2)},
+            new Identifier(NAMESPACE, "carcases/scaled_cod_carcase"),
             MEATLESS_COD_CARCASE
     );
     public static final CarcaseItem COD_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(FISH_SCALES, 8)},
+            new Identifier(NAMESPACE, "carcases/cod_carcase"),
             SCALED_COD_CARCASE
     );
 
-    //                            TROPICAL FISH
-    // ================================================================>
+//                            TROPICAL FISH
+// ================================================================>
 
     public static final CarcaseItem MEATLESS_TROPICAL_FISH_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.BONE, 2), new ItemCut(Items.BONE_MEAL, 3)},
+            new Identifier(NAMESPACE, "carcases/meatless_tropical_fish_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SCALED_TROPICAL_FISH_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(TROPICAL_FISH_STEAK, 8), new ItemCut(INTESTINE, 2)},
+            new Identifier(NAMESPACE, "carcases/scaled_tropical_fish_carcase"),
             MEATLESS_TROPICAL_FISH_CARCASE
     );
     public static final CarcaseItem TROPICAL_FISH_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(COLORFUL_FISH_SCALES, 8)},
+            new Identifier(NAMESPACE, "carcases/tropical_fish_carcase"),
             SCALED_TROPICAL_FISH_CARCASE
     );
 
-    //                             PUFFERFISH
-    // ================================================================>
+//                             PUFFERFISH
+// ================================================================>
 
     public static final CarcaseItem MEATLESS_PUFFERFISH_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.BONE, 2), new ItemCut(Items.BONE_MEAL, 3)},
+            new Identifier(NAMESPACE, "carcases/meatless_pufferfish_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SCALED_PUFFERFISH_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(PUFFERFISH_STEAK, 4),new ItemCut(POISONOUS_FISH_STEAK, 2), new ItemCut(INTESTINE, 2)},
+            new Identifier(NAMESPACE, "carcases/scaled_pufferfish_carcase"),
             MEATLESS_PUFFERFISH_CARCASE
     );
     public static final CarcaseItem PUFFERFISH_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(PUFFERFISH_SPIKE, 16)},
+            new Identifier(NAMESPACE, "carcases/pufferfish_carcase"),
             SCALED_PUFFERFISH_CARCASE
     );
 
-    //                              TURTLE
-    // ================================================================>
+//                              TURTLE
+// ================================================================>
 
     public static final CarcaseItem TURTLE_SHELL = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(LARGE_SCUTE, 14)},
+            new Identifier(NAMESPACE, "carcases/turtle_shell"),
             Items.AIR
     );
     public static final CarcaseItem MEATLESS_TURTLE_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(Items.BONE, 12)},
+            new Identifier(NAMESPACE, "carcases/meatless_turtle_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SHELLESS_TURTLE_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(TURTLE_STEAK, 48), new ItemCut(INTESTINE, 14)},
+            new Identifier(NAMESPACE, "carcases/shelless_turtle_carcase"),
             MEATLESS_TURTLE_CARCASE
     );
     public static final CarcaseItem TURTLE_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(TURTLE_SHELL, 1)},
+            new Identifier(NAMESPACE, "carcases/turtle_carcase"),
             SHELLESS_TURTLE_CARCASE
     );
 
-    //                             SQUIDS
-    // ================================================================>
+//                             SQUIDS
+// ================================================================>
 
     public static final CarcaseItem SQUID_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(SQUID_TENTACLE, 10), new ItemCut(Items.INK_SAC, 4)},
+            new Identifier(NAMESPACE, "carcases/squid_carcase"),
             Items.AIR
     );
     public static final CarcaseItem GLOW_SQUID_CARCASE = new CarcaseItem(
             new FabricItemSettings(),
-            new ItemCut[] {new ItemCut(GLOW_SQUID_TENTACLE, 10), new ItemCut(Items.GLOW_INK_SAC, 4)},
+            new Identifier(NAMESPACE, "carcases/glow_squid_carcase"),
             Items.AIR
     );
+
 
 
 
