@@ -1,0 +1,120 @@
+cow_hide:
+  minecraft:leather: 32
+
+soft_hide:
+  minecraft:leather: 8
+
+meatless_cow_carcase:
+  minecraft:bone: 12
+
+skinless_cow_carcase:
+  minecraft:beef: 32
+  rib: 2
+  tongue: 1
+  liver: 1
+  ground_beef: 32
+
+cow_carcase:
+  tsm:cow_hide: 1
+
+meatless_sheep_carcase:
+  minecraft:bone: 8
+
+skinless_sheep_carcase:
+  minecraft:mutton: 24
+  rib: 2
+  ground_mutton: 24
+
+sheep_carcase:
+  tsm:soft_hide: 1
+
+meatless_chicken_carcase:
+  minecraft:bone: 2
+  minecraft:bone_meal: 3
+
+skinless_chicken_carcase:
+  minecraft:chicken: 1
+  chicken_leg: 2
+  chicken_wing: 2
+
+chicken_carcase:
+  minecraft:feather: 32
+
+meatless_pig_carcase:
+  minecraft:bone: 8
+
+skinless_pig_carcase:
+  minecraft:porkchop: 24
+  rib: 2
+  ground_pork: 24
+  bacon: 8
+  ham: 4
+
+pig_carcase:
+  tsm:soft_hide: 1
+
+meatless_salmon_carcase:
+  minecraft:bone: 2
+  minecraft:bone_meal: 3
+
+scaled_salmon_carcase:
+  tsm:salmon_steak: 8
+  intestine: 2
+
+salmon_carcase:
+  tsm:fish_scales: 8
+
+meatless_cod_carcase:
+  minecraft:bone: 2
+  minecraft:bone_meal: 3
+
+scaled_cod_carcase:
+  tsm:cod_steak: 8
+  intestine: 2
+
+cod_carcase:
+  tsm:fish_scales: 8
+
+meatless_tropical_fish_carcase:
+  minecraft:bone: 2
+  minecraft:bone_meal: 3
+
+scaled_tropical_fish_carcase:
+  tsm:tropical_fish_steak: 8
+  intestine: 2
+
+tropical_fish_carcase:
+  tsm:colorful_fish_scales: 8
+
+meatless_pufferfish_carcase:
+  minecraft:bone: 2
+  minecraft:bone_meal: 3
+
+scaled_pufferfish_carcase:
+  tsm:pufferfish_steak: 4
+  tsm:poisonous_fish_steak: 2
+  intestine: 2
+
+pufferfish_carcase:
+  tsm:pufferfish_spike: 16
+
+turtle_shell:
+  tsm:large_scute: 14
+
+meatless_turtle_carcase:
+  minecraft:bone: 12
+
+shelless_turtle_carcase:
+  tsm:turtle_steak: 48
+  intestine: 14
+
+turtle_carcase:
+  tsm:turtle_shell: 1
+
+squid_carcase:
+  tsm:squid_tentacle: 10
+  minecraft:ink_sac: 4
+
+glow_squid_carcase:
+  tsm:glow_squid_tentacle: 10
+  minecraft:glow_ink_sac: 4
