@@ -30,6 +30,10 @@
  - Q: Will you port this mod to Forge?
  - A: No. I don't plan to.
 
+ + Q: Was this mod inspired by, or is it partially a copy of Butcher's Delight?
+ + A: Actually, no. I found and played Butcher's Delight after a couples of months into developing this mod. (The mod did exist before the repo)
+
+
 ## Contributing
 
 Who doesn't want to help someone make a mod which is purely devoted to complicating minecraft insanely? Hmm?
