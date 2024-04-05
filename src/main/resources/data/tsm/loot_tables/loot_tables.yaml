@@ -134,13 +134,14 @@ skinless_panda_carcase:
 meatless_panda_carcase:
   minecraft:bone: 12
 
-polar_bear_carcase:
+polarbear_carcase:
   tsm:bear_hide: 1
 
-skinless_polar_bear_carcase:
+skinless_polarbear_carcase:
   tsm:bear_steak: 48
   tsm:ground_bear: 48
   tsm:cod_carcase: 3
 
-meatless_polar_bear_carcase:
+meatless_polarbear_carcase:
   minecraft:bone: 16
+
