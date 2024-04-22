@@ -9,7 +9,7 @@
   - A: Let's say you're running through a cavern farming enemies, now you can carry a stack of each carcase instead of each of their drops individually.
 
   + Q: How does this effect mob drops?
-  + A: Currently, this basically anulls looting and makes it worthless. (You always get 1 carcase, no more or less, and each corpse has the same carcase)
+  + A: Currently, this basically anulls looting and makes it worthless. (You get 1 carcase per creature, no more or less, and the carcase is the same for each creature type)
   + A: On the other hand, you also get 32 beef, leather, and ground beef, 2 ribs, 1 tongue, 1 liver, and 12 bones, all from one cow.
 
   - Q: How does this complicate minecraft?
