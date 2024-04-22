@@ -1,6 +1,6 @@
 # The-Skinning-Mod
  This mod allows you to skin creatures instead of getting their drops directly.
- It also adds alot of byproducts from skinning creatures.
+ It also adds a lot of byproducts from skinning creatures.
 
  And as the name implies: It complicates minecraft.
 
