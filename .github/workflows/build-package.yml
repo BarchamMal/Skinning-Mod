@@ -4,41 +4,15 @@ on:
   push:
     branches:
       - master
-    # Run only if commit message starts with [Release]
-    paths-ignore:
-      - '**' # Ignore all changes, so it only checks the commit message
   pull_request:
     branches:
       - master
-    # Run only if pull request title starts with [Release]
-    types: [opened, synchronize]
-    paths-ignore:
-      - '**' # Ignore all changes, so it only checks the pull request title
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check if should run
-      run: |
-        if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-          if [[ "${{ github.event.pull_request.title }}" =~ ^\[Release\] ]]; then
-            echo "Running the workflow for pull request with title starting with [Release]"
-          else
-            echo "Skipping the workflow for pull request with title not starting with [Release]"
-            exit 1
-          fi
-        elif [[ "${{ github.event_name }}" == "push" ]]; then
-          if [[ $(git log --format=%B -n 1 ${{ github.sha }}) =~ ^\[Release\] ]]; then
-            echo "Running the workflow for push with commit message starting with [Release]"
-          else
-            echo "Skipping the workflow for push with commit message not starting with [Release]"
-            exit 1
-          fi
-        fi
-      shell: bash
-
     - name: Checkout repository
       uses: actions/checkout@v2
 
