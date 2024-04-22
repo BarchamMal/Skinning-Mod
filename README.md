@@ -40,7 +40,7 @@ Who doesn't want to help someone make a mod which is purely devoted to complicat
 Well, if you do want to help me (only a crazy person wouldn't) here's how:
 
 ### Programmers
-You already know how, check the [issues](https://github.com/BarchamMal/Skinning-Mod/issues) or make a [new](https://github.com/BarchamMal/Skinning-Mod/issues/new) one.
+You already know how, check the [issues](https://github.com/BarchamMal/Skinning-Mod/issues) or make a [new one](https://github.com/BarchamMal/Skinning-Mod/issues/new).
 Fork the repo, make your changes, make a Pull Request.
 
 ### Artists
