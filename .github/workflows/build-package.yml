@@ -8,6 +8,7 @@ on:
     paths-ignore:
       - '**' # Ignore all changes, so it only checks the pull request title
     condition: startsWith(github.event.pull_request.title, '[Release]')
+    
   push:
     branches:
       - master
