@@ -3,13 +3,13 @@ name: build
 on:
   push:
     branches:
-      - main
+      - master
     # Run only if commit message starts with [Release]
     paths-ignore:
       - '**' # Ignore all changes, so it only checks the commit message
   pull_request:
     branches:
-      - main
+      - master
     # Run only if pull request title starts with [Release]
     types: [opened, synchronize]
     paths-ignore:
