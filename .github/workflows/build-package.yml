@@ -1,5 +1,19 @@
 name: build
-on: [pull_request, push]
+
+on:
+  pull_request:
+    branches:
+      - master
+    types: [opened, synchronize]
+    paths-ignore:
+      - '**' # Ignore all changes, so it only checks the pull request title
+    condition: startsWith(github.event.pull_request.title, '[Release]')
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**' # Ignore all changes, so it only checks the commit message
+    condition: startsWith(github.event.head_commit.message, '[Release]')
 
 jobs:
   build:
