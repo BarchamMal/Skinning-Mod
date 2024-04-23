@@ -78,6 +78,24 @@ public class Meat {
     public static final Item GROUND_BEAR = createFood(GROUND_MEAT_FOOD);
     public static final Item COOKED_GROUND_BEAR = createFood(HAMBURGER_FOOD);
 
+    public static final Item BEE_STEAK = createFood(RARE_MEAT_FOOD);
+    public static final Item COOKED_BEE_STEAK = createFood(COOKED_RARE_MEAT_FOOD);
+    public static final Item CAMEL_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_CAMEL_STEAK = createFood(HAMBURGER_FOOD);
+    public static final Item CAT_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_CAT_STEAK = createFood(HAMBURGER_FOOD);
+    public static final Item EQUINE_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_EQUINE_STEAK = createFood(HAMBURGER_FOOD);
+    public static final Item LLAMA_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_LLAMA_STEAK = createFood(HAMBURGER_FOOD);
+
+    public static final Item GROUND_CAMEL = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_GROUND_CAMEL = createFood(GROUND_MEAT_FOOD);
+    public static final Item GROUND_LLAMA = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_GROUND_LLAMA = createFood(GROUND_MEAT_FOOD);
+    public static final Item GROUND_EQUINE = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_GROUND_EQUINE = createFood(GROUND_MEAT_FOOD);
+
     private static Item createFood(FoodComponent foodComponent) {
         return new Item(new FabricItemSettings().food(foodComponent));
     }
@@ -137,6 +155,24 @@ public class Meat {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_bear_steak"), COOKED_BEAR_STEAK);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ground_bear"), GROUND_BEAR);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_ground_bear"), COOKED_GROUND_BEAR);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bee_steak"), BEE_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_bee_steak"), COOKED_BEE_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "camel_steak"), CAMEL_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_camel_steak"), COOKED_CAMEL_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cat_meat"), CAT_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_cat_meat"), COOKED_CAT_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "equine_steak"), EQUINE_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_equine_steak"), COOKED_EQUINE_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "llama_steak"), LLAMA_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_llama_steak"), COOKED_LLAMA_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ground_camel"), GROUND_CAMEL);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_ground_camel"), COOKED_GROUND_CAMEL);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ground_llama"), GROUND_LLAMA);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_ground_llama"), COOKED_GROUND_LLAMA);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ground_equine"), GROUND_EQUINE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_ground_equine"), COOKED_GROUND_EQUINE);
+
+
 
     }
 
@@ -192,6 +228,25 @@ public class Meat {
         ItemGrouper.GroupItem(GROUND_BEAR, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_BEAR_STEAK)});
         ItemGrouper.GroupItem(COOKED_GROUND_BEAR, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GROUND_BEAR)});
 
-    }
+        ItemGrouper.GroupItem(BEE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_GROUND_BEAR)});
+        ItemGrouper.GroupItem(COOKED_BEE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, BEE_STEAK)});
+        ItemGrouper.GroupItem(CAMEL_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_BEE_STEAK)});
+        ItemGrouper.GroupItem(COOKED_CAMEL_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, CAMEL_STEAK)});
+        ItemGrouper.GroupItem(CAT_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_CAMEL_STEAK)});
+        ItemGrouper.GroupItem(COOKED_CAT_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, CAT_STEAK)});
+        ItemGrouper.GroupItem(EQUINE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_CAT_STEAK)});
+        ItemGrouper.GroupItem(COOKED_EQUINE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, EQUINE_STEAK)});
+        ItemGrouper.GroupItem(LLAMA_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_EQUINE_STEAK)});
+        ItemGrouper.GroupItem(COOKED_LLAMA_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, LLAMA_STEAK)});
 
+        ItemGrouper.GroupItem(GROUND_CAMEL, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_LLAMA_STEAK)});
+        ItemGrouper.GroupItem(COOKED_GROUND_CAMEL, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GROUND_CAMEL)});
+        ItemGrouper.GroupItem(GROUND_LLAMA, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_GROUND_CAMEL)});
+        ItemGrouper.GroupItem(COOKED_GROUND_LLAMA, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GROUND_LLAMA)});
+        ItemGrouper.GroupItem(GROUND_EQUINE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_GROUND_LLAMA)});
+        ItemGrouper.GroupItem(COOKED_GROUND_EQUINE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GROUND_EQUINE)});
+
+
+
+    }
 }
