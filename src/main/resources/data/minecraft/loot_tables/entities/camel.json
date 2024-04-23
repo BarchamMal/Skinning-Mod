@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "tsm:camel_carcase",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1.0,
+              "add": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "random_sequence": "minecraft:entities/camel"
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:loot_table",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:white_wool",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 8,
+                "max": 8
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

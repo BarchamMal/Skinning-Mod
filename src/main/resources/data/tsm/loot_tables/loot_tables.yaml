@@ -4,6 +4,9 @@ cow_hide:
 soft_hide:
   minecraft:leather: 8
 
+woolly_hide:
+  minecraft:white_wool: 8
+
 meatless_cow_carcase:
   minecraft:bone: 12
 
@@ -145,3 +148,65 @@ skinless_polarbear_carcase:
 meatless_polarbear_carcase:
   minecraft:bone: 16
 
+bee_carcase:
+  tsm:bee_exoskeleton: 1
+
+shelled_bee_carcase:
+  tsm:bee_steak: 8
+
+bee_exoskeleton:
+  minecraft:bone_meal: 12
+
+horse_carcase:
+  tsm:cow_hide: 1
+
+skinless_equine_carcase:
+  tsm:equine_steak: 32
+  tsm:rib: 2
+  tsm:ground_equine: 32
+
+meatless_equine_carcase:
+  minecraft:bone: 16
+
+donkey_carcase:
+  tsm:cow_hide: 1
+
+mule_carcase:
+  tsm:cow_hide: 1
+
+camel_carcase:
+  tsm:cow_hide: 1
+
+skinless_camel_carcase:
+  tsm:camel_steak: 40
+  tsm:rib: 2
+  tsm:tongue: 1
+  tsm:liver: 1
+  tsm:ground_camel: 40
+
+meatless_camel_carcase:
+  minecraft:bone: 14
+
+llama_carcase:
+  tsm:woolly_hide: 1
+
+skinless_llama_carcase:
+  tsm:llama_steak:  32
+  tsm:rib: 2
+  tsm:tongue: 1
+  tsm:liver: 1
+  tsm:ground_llama: 32
+
+meatless_llama_carcase:
+  minecraft:bone: 10
+
+cat_carcase:
+  tsm:fur: 4
+
+skinless_cat_carcase:
+  tsm:cat_meat: 6
+  tsm:intestine: 4
+
+meatless_cat_carcase:
+  minecraft:bone: 2
+  minecraft:bone_meal: 4

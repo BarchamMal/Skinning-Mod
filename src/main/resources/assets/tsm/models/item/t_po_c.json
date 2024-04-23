@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "tsm:item/carcase",
+	"parent": "tsm:item/large_carcase",
 	"texture_size": [128, 64],
 	"elements": [
 		{

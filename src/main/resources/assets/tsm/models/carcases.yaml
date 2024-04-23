@@ -1,0 +1,43 @@
+t_b_c:
+  bee_exoskeleton:
+    category: bee
+  shelled_bee_carcase:
+    category: bee
+  bee_carcase:
+    category: bee
+
+t_h_c:
+  meatless_equine_carcase:
+    category: equine
+  skinless_equine_carcase:
+    category: equine
+  horse_carcase:
+    category: equine
+  donkey_carcase:
+    category: equine
+  mule_carcase:
+    category: equine
+
+t_ca_c:
+  meatless_camel_carcase:
+    category: camel
+  skinless_camel_carcase:
+    category: camel
+  camel_carcase:
+    category: camel
+
+t_l_c:
+  meatless_llama_carcase:
+    category: llama
+  skinless_llama_carcase:
+    category: llama
+  llama_carcase:
+    category: llama
+
+t_o_c:
+  meatless_cat_carcase:
+    category: cat
+  skinless_cat_carcase:
+    category: cat
+  cat_carcase:
+    category: cat

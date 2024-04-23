@@ -45,7 +45,17 @@ glow_squid_tentacle,
 squid_tentacle,
 bear_steak,
 ground_bear,
-turtle_steak
+turtle_steak,
+bee_steak,
+cooked_bee_steak,
+camel_steak,
+cooked_camel_steak,
+cat_meat,
+cooked_cat_meat,
+equine_steak,
+cooked_equine_steak,
+llama_steak,
+cooked_llama_steak
 """.replace("\n", "").split(',')
 
 for food in foods:
