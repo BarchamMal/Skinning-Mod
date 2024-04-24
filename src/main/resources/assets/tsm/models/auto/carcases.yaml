@@ -92,11 +92,11 @@ t_pf_c:
 
 t_po_c:
   polarbear_carcase:
-    category: polar_bear
+    category: polarbear
   skinless_polarbear_carcase:
-    category: polar_bear
+    category: polarbear
   meatless_polarbear_carcase:
-    category: polar_bear
+    category: polarbear
 
 t_s_c:
   sheep_carcase:

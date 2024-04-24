@@ -27,8 +27,8 @@ loot_tables:
     - panda
   chicken:
     - chicken
-  polar_bear:
-    - polar_bear
+  polarbear:
+    - polarbear
   salmon:
     - salmon
   cow:

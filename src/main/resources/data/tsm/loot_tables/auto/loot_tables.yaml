@@ -95,7 +95,7 @@ meatless_pufferfish_carcase:
 
 scaled_pufferfish_carcase:
   tsm:pufferfish_steak: 4
-  tsm:poisonous_fish_steak: 2
+  tsm:poison_fish_steak: 2
   tsm:intestine: 2
 
 pufferfish_carcase:
