@@ -1,7 +1,0 @@
-{
-	"credit": "Made with Blockbench",
-	"parent": "tsm:item/t_t_c",
-	"textures": {
-		"0": "tsm:item/carcase/turtle/turtle_carcase"
-	}
-}

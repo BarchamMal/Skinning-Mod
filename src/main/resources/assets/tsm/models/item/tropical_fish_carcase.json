@@ -1,8 +1,0 @@
-{
-	"credit": "Made with Blockbench",
-	"parent": "tsm:item/t_tf_c",
-	"texture_size": [32,32],
-	"textures": {
-		"0": "tsm:item/carcase/tropical_fish/tropical_fish_carcase"
-	}
-}
