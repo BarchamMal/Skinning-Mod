@@ -1,9 +1,67 @@
+"""
+Entity Loot Table Creator
+
+This script creates JSON loot tables for entities dropping one item (their carcase) based on a YAML file and saves them to the specified output directory.
+
+Usage:
+    python create_entity_loot_table.py <yaml_file> <output_dir>
+
+Args:
+    yaml_file (str): Path to the input YAML file containing a list of entities.
+    output_dir (str): Directory to save the generated JSON loot tables.
+
+Examples:
+    - YAML file:
+        loot_tables:
+          bee:
+            - bee 
+          donkey:
+            - donkey
+          mule:
+            - mule
+          horse:
+            - horse
+          camel:
+            - camel 
+          llama:
+            - llama
+            - trader_llama
+          cat:
+            - cat
+            - ocelot
+          skeleton_horse:
+            - meatless_equine
+
+    - Command:
+        python create_entity_loot_table.py entities.yaml loot_tables
+
+    - Output:
+        - loot_tables/bee.json
+        - loot_tables/donkey.json
+        - loot_tables/mule.json
+        - loot_tables/horse.json
+        - loot_tables/camel.json
+        - loot_tables/llama.json
+        - loot_tables/cat.json
+        - loot_tables/skeleton_horse.json
+"""
+
 import json
 import os
 import argparse
 import yaml
 
 def create_entity_loot_table(entities, output_dir):
+    """
+    Create JSON loot tables for entities dropping one item (their carcase) and save them to the output directory.
+
+    Args:
+        entities (dict): Dictionary containing entities and their associated carcases.
+        output_dir (str): Output directory to save JSON loot tables.
+
+    Returns:
+        None
+    """
     for entity, carcases in entities.items():
         for carcase in carcases:
             output_file = os.path.join(output_dir, f"{carcase}.json")

@@ -1,9 +1,66 @@
+"""
+Carcase Item Model Creator
+
+This script creates carcase item models based on a YAML dictionary and saves them to the specified output directory.
+
+Usage:
+    python create_carcase_models.py <yaml_file> <output_dir>
+
+Args:
+    yaml_file (str): Path to the input YAML file containing dictionaries of item names and categories.
+    output_dir (str): Directory to save the generated carcase item models.
+
+Examples:
+    - YAML file:
+        t_b_c:
+          bee_exoskeleton:
+            category: bee
+          shelled_bee_carcase:
+            category: bee
+          bee_carcase:
+            category: bee
+        t_h_c:
+          meatless_equine_carcase:
+            category: equine
+          skinless_equine_carcase:
+            category: equine
+          horse_carcase:
+            category: equine
+          donkey_carcase:
+            category: equine
+          mule_carcase:
+            category: equine
+
+    - Command:
+        python create_carcase_models.py carcases.yaml models/carcases
+
+    - Output:
+        - models/carcases/bee_exoskeleton.json
+        - models/carcases/shelled_bee_carcase.json
+        - models/carcases/bee_carcase.json
+        - models/carcases/meatless_equine_carcase.json
+        - models/carcases/skinless_equine_carcase.json
+        - models/carcases/horse_carcase.json
+        - models/carcases/donkey_carcase.json
+        - models/carcases/mule_carcase.json
+"""
+
 import os
 import yaml
 import argparse
 import json
 
-def create_item_models(yaml_file, output_dir):
+def create_carcase_models(yaml_file, output_dir):
+    """
+    Create carcase item models from a YAML dictionary and save them to the output directory.
+
+    Args:
+        yaml_file (str): Path to the input YAML file containing dictionaries of item names and categories.
+        output_dir (str): Output directory to save carcase item models.
+
+    Returns:
+        None
+    """
     with open(yaml_file, 'r') as stream:
         try:
             data = yaml.safe_load(stream)
@@ -33,8 +90,8 @@ def create_item_models(yaml_file, output_dir):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create item models from a YAML dictionary")
-    parser.add_argument("yaml_file", help="Input YAML file containing dictionaries of item names")
-    parser.add_argument("output_dir", help="Output directory to save item models")
+    parser.add_argument("yaml_file", help="Input YAML file containing dictionaries of item names and categories")
+    parser.add_argument("output_dir", help="Output directory to save carcase item models")
     args = parser.parse_args()
 
     yaml_file = args.yaml_file
@@ -43,4 +100,4 @@ if __name__ == "__main__":
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    create_item_models(yaml_file, output_dir)
+    create_carcase_models(yaml_file, output_dir)

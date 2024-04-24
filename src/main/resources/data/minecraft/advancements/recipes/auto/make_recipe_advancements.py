@@ -1,9 +1,35 @@
+"""
+Recipe and Advancement Updater
+
+This script updates recipe and advancement files based on food items. It takes a template file containing JSON data for recipes or advancements,
+a YAML file containing a list of food items, and an output directory to save the updated JSON files.
+
+Usage:
+    python recipe_advancement_updater.py <template> <foods_yaml> <output_dir>
+
+Args:
+    template (str): Path to the template file containing JSON data for recipes or advancements.
+    foods_yaml (str): Path to the YAML file containing the list of food items.
+    output_dir (str): Directory to save the updated JSON files.
+
+Example:
+    python recipe_advancement_updater.py template.json foods.yaml updated_files
+"""
+
 import json
 import os
 import argparse
 import yaml
 
 def update_recipe_files(template, foods_yaml, output_dir):
+    """
+    Update recipe and advancement files based on food items.
+
+    Args:
+        template (str): Path to the template file containing JSON data for recipes or advancements.
+        foods_yaml (str): Path to the YAML file containing the list of food items.
+        output_dir (str): Directory to save the updated JSON files.
+    """
     # Read the list of food items from the YAML file
     with open(foods_yaml, 'r') as yaml_file:
         foods = yaml.safe_load(yaml_file)
@@ -57,11 +83,11 @@ def update_recipe_files(template, foods_yaml, output_dir):
 
 if __name__ == "__main__":
     # Parse command-line arguments
-    parser = argparse.ArgumentParser(description="Update recipe files based on food items")
-    parser.add_argument("template", help="Folder containing template JSON files")
-    parser.add_argument("foods", help="YAML file containing the list of food items")
+    parser = argparse.ArgumentParser(description="Update recipe and advancement files based on food items")
+    parser.add_argument("template", help="Path to the template file containing JSON data for recipes or advancements")
+    parser.add_argument("foods", help="Path to the YAML file containing the list of food items")
     parser.add_argument("output_dir", help="Output directory to save updated JSON files")
     args = parser.parse_args()
 
-    # Call the function to update recipe files
+    # Call the function to update recipe and advancement files
     update_recipe_files(args.template, args.foods, args.output_dir)

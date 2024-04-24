@@ -1,9 +1,49 @@
+"""
+Simple Item Model Creator
+
+This script creates simple generated item models based on a YAML list of item names and saves them to the specified output directory.
+
+Usage:
+    python create_item_models.py <yaml_file> <output_dir>
+
+Args:
+    yaml_file (str): Path to the input YAML file containing a list of item names.
+    output_dir (str): Directory to save the generated item models.
+
+Examples:
+    - YAML file:
+        items:
+          sword
+          shield
+          pickaxe
+          axe
+
+    - Command:
+        python create_item_models.py items.yaml models/items
+
+    - Output:
+        - models/items/sword.json
+        - models/items/shield.json
+        - models/items/pickaxe.json
+        - models/items/axe.json
+"""
+
 import os
 import yaml
 import argparse
 import json
 
 def create_item_models(yaml_file, output_dir):
+    """
+    Create simple item models from a YAML list and save them to the output directory.
+
+    Args:
+        yaml_file (str): Path to the input YAML file containing a list of item names.
+        output_dir (str): Output directory to save item models.
+
+    Returns:
+        None
+    """
     with open(yaml_file, 'r') as stream:
         try:
             data = yaml.safe_load(stream)
