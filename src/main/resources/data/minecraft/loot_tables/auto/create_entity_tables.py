@@ -51,6 +51,19 @@ import os
 import argparse
 import yaml
 
+def delete(path: str = None):
+    """
+    Deletes the file specified.
+
+    Args:
+        path (str): The path of the file to delete
+    
+    Returns:
+        None
+    """
+    return
+    os.remove(path)
+
 def create_entity_loot_table(entities, output_dir):
     """
     Create JSON loot tables for entities dropping one item (their carcase) and save them to the output directory.
@@ -98,6 +111,7 @@ def create_entity_loot_table(entities, output_dir):
             
             if over: print(f"Overwriting existing file: {output_file}")
             else: print(f"Created loot table: {output_file}")
+            delete(output_file)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create JSON loot tables for entities dropping one item (their carcase)")

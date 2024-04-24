@@ -50,6 +50,19 @@ import yaml
 import argparse
 import json
 
+def delete(path: str = None):
+    """
+    Deletes the file specified.
+
+    Args:
+        path (str): The path of the file to delete
+    
+    Returns:
+        None
+    """
+    return
+    os.remove(path)
+
 def create_carcase_models(yaml_file, output_dir):
     """
     Create carcase item models from a YAML dictionary and save them to the output directory.
@@ -84,6 +97,7 @@ def create_carcase_models(yaml_file, output_dir):
             
                     if over: print(f"Overwriting existing file: {output_file}")
                     else: print(f"Created carcase model: {output_file}")
+                    delete(output_file)
         except yaml.YAMLError as exc:
             print(exc)
 

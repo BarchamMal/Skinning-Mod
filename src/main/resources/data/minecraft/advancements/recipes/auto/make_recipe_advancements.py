@@ -21,6 +21,19 @@ import os
 import argparse
 import yaml
 
+def delete(path: str = None):
+    """
+    Deletes the file specified.
+
+    Args:
+        path (str): The path of the file to delete
+    
+    Returns:
+        None
+    """
+    return
+    os.remove(path)
+
 def update_recipe_files(template, foods_yaml, output_dir):
     """
     Update recipe and advancement files based on food items.
@@ -78,6 +91,7 @@ def update_recipe_files(template, foods_yaml, output_dir):
 
             if over: print(f"Overwriting existing file: {output_file}")
             else: print(f"Created recipe or advancement: {output_file}")
+            delete(output_file)
 
             i+=1
 

@@ -33,6 +33,19 @@ import yaml
 import argparse
 import json
 
+def delete(path: str = None):
+    """
+    Deletes the file specified.
+
+    Args:
+        path (str): The path of the file to delete
+    
+    Returns:
+        None
+    """
+    return
+    os.remove(path)
+
 def create_item_models(yaml_file, output_dir):
     """
     Create simple item models from a YAML list and save them to the output directory.
@@ -64,6 +77,7 @@ def create_item_models(yaml_file, output_dir):
                     json.dump(item_model, outfile, indent=2)
                 if over: print(f"Overwriting existing file: {output_file}")
                 else: print(f"Created item model: {output_file}")
+                delete(output_file)
         except yaml.YAMLError as exc:
             print(exc)
 

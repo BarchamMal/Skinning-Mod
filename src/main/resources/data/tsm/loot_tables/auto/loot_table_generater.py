@@ -35,6 +35,19 @@ import os
 import yaml
 import argparse
 
+def delete(path: str = None):
+    """
+    Deletes the file specified.
+
+    Args:
+        path (str): The path of the file to delete
+    
+    Returns:
+        None
+    """
+    return
+    os.remove(path)
+
 def create_loot_table(yaml_file, output_dir):
     """
     Convert YAML loot table data to JSON loot tables.
@@ -130,6 +143,7 @@ def create_loot_table(yaml_file, output_dir):
                     json.dump(loot_table, outfile, indent=2)
                 if over: print(f"Overwriting existing file: {output_file}")
                 else: print(f"Created loot table: {output_file}")
+                delete(output_file)
         except yaml.YAMLError as exc:
             print(exc)
 
