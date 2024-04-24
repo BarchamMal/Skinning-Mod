@@ -15,5 +15,31 @@ loot_tables:
   cat:
     - cat
     - ocelot
-  skeleton_horse:
-    - meatless_equine
+  meatless_equine:
+    - skeleton_horse
+  glow_squid:
+    - glow_squid
+  cod:
+    - cod
+  pig:
+    - pig
+  panda:
+    - panda
+  chicken:
+    - chicken
+  polar_bear:
+    - polar_bear
+  salmon:
+    - salmon
+  cow:
+    - cow
+  tropical_fish:
+    - tropical_fish
+  sheep:
+    - sheep
+  pufferfish:
+    - pufferfish
+  turtle:
+    - turtle
+  squid:
+    - squid

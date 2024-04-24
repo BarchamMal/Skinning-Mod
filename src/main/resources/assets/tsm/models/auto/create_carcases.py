@@ -74,7 +74,6 @@ def create_carcase_models(yaml_file, output_dir):
                     item_model = {
                         "credit": "Made with Blockbench",
                         "parent": f"tsm:item/{category}",
-                        "texture_size": [64, 32],
                         "textures": {
                             "0": f"tsm:item/carcase/{item_data['category']}/{item_name}"
                         }

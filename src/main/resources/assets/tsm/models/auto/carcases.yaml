@@ -6,38 +6,134 @@ t_b_c:
   bee_carcase:
     category: bee
 
+t_c_c:
+  cow_carcase:
+    category: cow
+  skinless_cow_carcase:
+    category: cow
+  meatless_cow_carcase:
+    category: cow
+
+t_ca_c:
+  camel_carcase:
+    category: camel
+  skinless_camel_carcase:
+    category: camel
+  meatless_camel_carcase:
+    category: camel
+
+t_ch_c:
+  chicken_carcase:
+    category: chicken
+  skinless_chicken_carcase:
+    category: chicken
+  meatless_chicken_carcase:
+    category: chicken
+
+t_co_c:
+  cod_carcase:
+    category: cod
+  scaled_cod_carcase:
+    category: cod
+  meatless_cod_carcase:
+    category: cod
+
 t_h_c:
-  meatless_equine_carcase:
-    category: equine
-  skinless_equine_carcase:
-    category: equine
   horse_carcase:
     category: equine
   donkey_carcase:
     category: equine
   mule_carcase:
     category: equine
-
-t_ca_c:
-  meatless_camel_carcase:
-    category: camel
-  skinless_camel_carcase:
-    category: camel
-  camel_carcase:
-    category: camel
+  skinless_equine_carcase:
+    category: equine
+  meatless_equine_carcase:
+    category: equine
 
 t_l_c:
-  meatless_llama_carcase:
+  llama_carcase:
     category: llama
   skinless_llama_carcase:
     category: llama
-  llama_carcase:
+  meatless_llama_carcase:
     category: llama
 
-t_o_c:
-  meatless_cat_carcase:
+t_c_c:
+  cat_carcase:
     category: cat
   skinless_cat_carcase:
     category: cat
-  cat_carcase:
+  meatless_cat_carcase:
     category: cat
+
+t_p_c:
+  pig_carcase:
+    category: pig
+  skinless_pig_carcase:
+    category: pig
+  meatless_pig_carcase:
+    category: pig
+
+t_pa_c:
+  panda_carcase:
+    category: panda
+  skinless_panda_carcase:
+    category: panda
+  meatless_panda_carcase:
+    category: panda
+
+t_pf_c:
+  pufferfish_carcase:
+    category: pufferfish
+  scaled_pufferfish_carcase:
+    category: pufferfish
+  meatless_pufferfish_carcase:
+    category: pufferfish
+
+t_po_c:
+  polarbear_carcase:
+    category: polar_bear
+  skinless_polarbear_carcase:
+    category: polar_bear
+  meatless_polarbear_carcase:
+    category: polar_bear
+
+t_s_c:
+  sheep_carcase:
+    category: sheep
+  skinless_sheep_carcase:
+    category: sheep
+  meatless_sheep_carcase:
+    category: sheep
+
+t_sa_c:
+  salmon_carcase:
+    category: salmon
+  scaled_salmon_carcase:
+    category: salmon
+  meatless_salmon_carcase:
+    category: salmon
+
+t_sq_c:
+  squid_carcase:
+    category: squid
+  glow_squid_carcase:
+    category: squid
+
+t_t_c:
+  turtle_carcase:
+    category: turtle
+  meatless_turtle_carcase:
+    category: turtle
+  shelless_turtle_carcase:
+    category: turtle
+  turtle_shell:
+    category: turtle
+
+t_tf_c:
+  tropical_fish_carcase:
+    category: tropical_fish
+  scaled_tropical_fish_carcase:
+    category: tropical_fish
+  meatless_tropical_fish_carcase:
+    category: tropical_fish
