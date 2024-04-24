@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:<craft>",
+  "category": "food",
+  "cookingtime": <time>,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "tsm:<food>"
+  },
+  "result": "tsm:cooked_<food>"
+}

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_food": {
+    "has_<food>": {
       "conditions": {
         "items": [
           {
             "items": [
-              "food"
+              "tsm:<food>"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "cooked_food"
+        "recipe": "tsm:cooked_<food><cook>"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_food",
+      "has_<food>",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "cooked_food"
+      "tsm:cooked_<food><cook>"
     ]
   }
 }

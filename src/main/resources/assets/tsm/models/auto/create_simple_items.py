@@ -9,9 +9,9 @@ def create_item_models(yaml_file, output_dir):
             data = yaml.safe_load(stream)
             for item_name in data:
                 output_file = os.path.join(output_dir, f"{item_name}.json")
+                over = False
                 if os.path.exists(output_file):
-                    print(f"Skipping existing file: {output_file}")
-                    continue
+                    over =  True
 
                 item_model = {
                     "parent": "minecraft:item/generated",
@@ -22,7 +22,8 @@ def create_item_models(yaml_file, output_dir):
 
                 with open(output_file, 'w') as outfile:
                     json.dump(item_model, outfile, indent=2)
-                print(f"Created item model: {output_file}")
+                if over: print(f"Overwriting existing file: {output_file}")
+                else: print(f"Created item model: {output_file}")
         except yaml.YAMLError as exc:
             print(exc)
 

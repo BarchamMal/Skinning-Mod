@@ -53,9 +53,9 @@ def create_loot_table(yaml_file, output_dir):
                 output_file = os.path.join(output_dir, f"{key}.json")
                 
                 # Check if the output file already exists
+                over = False
                 if os.path.exists(output_file):
-                    print(f"Skipping existing file: {output_file}")
-                    continue
+                    over =  True
 
                 loot_table = {
                     "type": "minecraft:loot_table",
@@ -128,7 +128,8 @@ def create_loot_table(yaml_file, output_dir):
                 
                 with open(output_file, 'w') as outfile:
                     json.dump(loot_table, outfile, indent=2)
-                print(f"Created loot table: {output_file}")
+                if over: print(f"Overwriting existing file: {output_file}")
+                else: print(f"Created loot table: {output_file}")
         except yaml.YAMLError as exc:
             print(exc)
 

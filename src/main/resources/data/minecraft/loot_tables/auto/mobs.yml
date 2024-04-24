@@ -1,0 +1,19 @@
+loot_tables:
+  bee:
+    - bee 
+  donkey:
+    - bee
+  mule:
+    - mule
+  horse:
+    - horse
+  camel:
+    - camel 
+  llama:
+    - llama
+    - trader_llama
+  cat:
+    - cat
+    - ocelot
+  skeleton_horse:
+    - meatless_equine
