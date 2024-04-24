@@ -14,6 +14,9 @@ jobs:
       - name: make run_scripts executable
         if: ${{ runner.os == 'Linux' }}
         run: chmod +x ./run_scripts.sh
+      - name: install pyyaml
+        if: ${{ runner.os == 'Windows' }}
+        run: pip install pyyaml
       - name: run_scripts for windows
         if: ${{ runner.os == 'Windows' }}
         run: ./run_scripts.bat
