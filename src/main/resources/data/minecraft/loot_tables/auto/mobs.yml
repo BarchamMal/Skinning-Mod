@@ -2,7 +2,7 @@ loot_tables:
   bee:
     - bee 
   donkey:
-    - bee
+    - donkey
   mule:
     - mule
   horse:
