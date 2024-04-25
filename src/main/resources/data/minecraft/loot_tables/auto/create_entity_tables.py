@@ -29,8 +29,8 @@ Examples:
           cat:
             - cat
             - ocelot
-          skeleton_horse:
-            - meatless_equine
+          meatless_equine:
+            - skeleton_horse
 
     - Command:
         python create_entity_loot_table.py entities.yaml loot_tables

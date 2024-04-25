@@ -4,7 +4,7 @@ Carcase Item Model Creator
 This script creates carcase item models based on a YAML dictionary and saves them to the specified output directory.
 
 Usage:
-    python create_carcase_models.py <yaml_file> <output_dir>
+    python create_carcases.py <yaml_file> <output_dir>
 
 Args:
     yaml_file (str): Path to the input YAML file containing dictionaries of item names and categories.
@@ -32,7 +32,7 @@ Examples:
             category: equine
 
     - Command:
-        python create_carcase_models.py carcases.yaml models/carcases
+        python create_carcases.py carcases.yaml models/carcases
 
     - Output:
         - models/carcases/bee_exoskeleton.json

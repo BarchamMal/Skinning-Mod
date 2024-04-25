@@ -5,7 +5,7 @@ This script updates recipe and advancement files based on food items. It takes a
 a YAML file containing a list of food items, and an output directory to save the updated JSON files.
 
 Usage:
-    python recipe_advancement_updater.py <template> <foods_yaml> <output_dir>
+    python make_recipe_advancements.py <template> <foods_yaml> <output_dir>
 
 Args:
     template (str): Path to the template file containing JSON data for recipes or advancements.
@@ -13,7 +13,7 @@ Args:
     output_dir (str): Directory to save the updated JSON files.
 
 Example:
-    python recipe_advancement_updater.py template.json foods.yaml updated_files
+    python make_recipe_advancements.py template.json foods.yaml updated_files
 """
 
 import json
