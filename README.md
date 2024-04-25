@@ -24,8 +24,8 @@
  - A: Well, it's not on Curseforge, but if you want to compile it yourself and use it anyways be my guest. Just credit me and provide a link to this repo.
 
  + Q: Will you port this mod to X version?
- + A: If X is before 1.20.4 then no, I don't plan to.
- + A: If X is after 1.20.4 then yes, when the Fabric APIs are updated.
+ + A: If X is before the current mod version then no, I don't plan to.
+ + A: If X is after the current mod version then yes, when the Fabric APIs are updated.
 
  - Q: Will you port this mod to Forge?
  - A: No. I don't plan to.
