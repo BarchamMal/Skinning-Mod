@@ -46,6 +46,9 @@ def update_recipe_files(template, foods_yaml, output_dir):
     # Read the list of food items from the YAML file
     with open(foods_yaml, 'r') as yaml_file:
         foods = yaml.safe_load(yaml_file)
+    
+    if not os.path.exists(output_dir):
+        os.mkdir(output_dir)
 
     # The list of template file names for export
     template_files = [
@@ -83,7 +86,7 @@ def update_recipe_files(template, foods_yaml, output_dir):
             # Check if the output file already exists
             over = False
             if os.path.exists(output_file):
-                over =  True
+                over = True
 
             # Write the updated JSON data to the output file
             with open(output_file, 'w') as outputfile:

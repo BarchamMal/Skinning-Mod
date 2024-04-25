@@ -29,4 +29,4 @@ echo Starting Loot Tables
 echo -------------------------------------Entities-------------------------------------
 python src\main\resources\data\minecraft\loot_tables\auto\create_entity_tables.py src\main\resources\data\minecraft\loot_tables\auto\mobs.yml src\main\resources\data\minecraft\loot_tables\entities
 echo -------------------------------------Carcases-------------------------------------
-python src\main\resources\data\tsm\loot_tables\auto\loot_table_generater.py src\main\resources\data\tsm\loot_tables\auto\loot_tables.yaml src\main\resources\data\tsm\loot_tables\carcases
+python src\main\resources\data\tsm\loot_tables\auto\loot_table_generator.py src\main\resources\data\tsm\loot_tables\auto\loot_tables.yaml src\main\resources\data\tsm\loot_tables\carcases
