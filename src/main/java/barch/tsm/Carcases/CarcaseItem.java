@@ -16,17 +16,55 @@ import java.util.List;
 
 import static barch.tsm.Tags.KNIVES;
 
+/**
+ * The CarcaseItem class represents an item that can be used to obtain loot drops from a specified loot table.
+ * <p>
+ * This class extends {@link Item} and overrides the {@link #use(World, PlayerEntity, Hand)} method to define custom behavior
+ * when the item is used by a player.
+ * </p>
+ * <p>
+ * When a player uses this item, loot is generated from the specified loot table and added to the player's inventory.
+ * The number of loot drops generated depends on the count of the carcase item in the player's hand.
+ * </p>
+ *
+ * @since 1.0.0
+ * @see Item
+ */
 public class CarcaseItem extends Item {
+
+    // Fields
+    // ---------------------------------------------------------------
 
     private Identifier lootTableId;
     private Item giveBack;
 
-    public CarcaseItem(Settings settings, Identifier lootTableId, Item item) {
+    // Constructor
+    // ---------------------------------------------------------------
+
+    /**
+     * Constructs a new CarcaseItem with the specified settings, loot table identifier, and item to give back.
+     *
+     * @param settings    The settings for the item.
+     * @param lootTableId The identifier of the loot table to use for generating loot drops.
+     * @param giveBack    The item to give back to the player after generating loot drops.
+     */
+    public CarcaseItem(Settings settings, Identifier lootTableId, Item giveBack) {
         super(settings);
         this.lootTableId = lootTableId;
-        this.giveBack = item;
+        this.giveBack = giveBack;
     }
 
+    // Methods
+    // ---------------------------------------------------------------
+
+    /**
+     * Handles the logic when the player uses the carcase item.
+     *
+     * @param world The world in which the player uses the item.
+     * @param user  The player who uses the item.
+     * @param hand  The hand in which the player holds the item.
+     * @return A {@link TypedActionResult} representing the result of using the item.
+     */
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 
@@ -82,6 +120,12 @@ public class CarcaseItem extends Item {
         return TypedActionResult.consume(stack);
     }
 
+    /**
+     * Gives an item stack to the specified player, either by adding it to their inventory or dropping it on the ground.
+     *
+     * @param itemStack The item stack to give to the player.
+     * @param player    The player to receive the item stack.
+     */
     public void giveItem(ItemStack itemStack, PlayerEntity player) {
 
         if (player.getAbilities().creativeMode) {

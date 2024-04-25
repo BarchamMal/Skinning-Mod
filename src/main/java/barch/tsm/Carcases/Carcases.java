@@ -9,14 +9,26 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.tsm.Foods.Meat.*;
 import static barch.tsm.TheSkinningMod.CARCASES_GROUP;
 import static barch.tsm.TheSkinningMod.NAMESPACE;
-import static barch.tsm.Carcases.AnimalByproducts.*;
 
+/**
+ * The Carcases class contains static final fields representing various carcase items and methods for initializing and registering them.
+ * <p>
+ * Each carcase item is represented as a {@link CarcaseItem} object with specific settings and dependencies.
+ * The class also provides a method {@link #onInitialize()} for registering all carcase items with the game registry.
+ * </p>
+ * <p>
+ * The carcase items are organized into different categories such as HIDE and COW.
+ * Each category contains specific carcase items associated with different animals or materials.
+ * </p>
+ *
+ * @since 1.0.0
+ * @see CarcaseItem
+ */
 public class Carcases {
 
-    //                              HIDE
+    //                            HIDE
 // ================================================================>
 
     public static final CarcaseItem COW_HIDE = new CarcaseItem(
