@@ -3,6 +3,9 @@ package barch.tsm.Carcases;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -82,16 +85,14 @@ public class CarcaseItem extends Item {
             return TypedActionResult.fail(itemStack);
         }
 
-        ServerWorld serverWorld = (ServerWorld) world;
-
-
         // Define loot context parameters
         LootContextParameterSet.Builder builder = (new LootContextParameterSet.Builder((ServerWorld)world))
                 .add(LootContextParameters.THIS_ENTITY, user)
                 .add(LootContextParameters.ORIGIN, user.getPos());
 
         // Get the loot table instance for the given identifier
-        LootTable lootTable = world.getServer().getLootManager().getLootTable(lootTableId);
+        RegistryKey<LootTable> lootTableKey = RegistryKey.of(RegistryKeys.LOOT_TABLE, lootTableId);
+        LootTable lootTable = world.getServer().getReloadableRegistries().getLootTable(lootTableKey);
 
         // Get the number of carcase items in the stack
         int itemCount = user.getStackInHand(hand).getCount();

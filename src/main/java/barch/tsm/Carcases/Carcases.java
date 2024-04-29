@@ -2,7 +2,7 @@ package barch.tsm.Carcases;
 
 import barch.tsm.Glue.ItemGrouped;
 import barch.tsm.Glue.ItemGrouper;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
@@ -32,22 +32,22 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem COW_HIDE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/cow_hide"),
             Items.AIR
     );
     public static final CarcaseItem SOFT_HIDE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/soft_hide"),
             Items.AIR
     );
     public static final CarcaseItem BEAR_HIDE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/bear_hide"),
             Items.AIR
     );
     public static final CarcaseItem WOOLLY_HIDE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/woolly_hide"),
             Items.AIR
     );
@@ -56,17 +56,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_COW_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_cow_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_COW_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/skinless_cow_carcase"),
             MEATLESS_COW_CARCASE
     );
     public static final CarcaseItem COW_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/cow_carcase"),
             SKINLESS_COW_CARCASE
     );
@@ -75,17 +75,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_SHEEP_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_sheep_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_SHEEP_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/skinless_sheep_carcase"),
             MEATLESS_SHEEP_CARCASE
     );
     public static final CarcaseItem SHEEP_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/sheep_carcase"),
             SKINLESS_SHEEP_CARCASE
     );
@@ -94,17 +94,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_CHICKEN_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_chicken_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_CHICKEN_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/skinless_chicken_carcase"),
             MEATLESS_CHICKEN_CARCASE
     );
     public static final CarcaseItem CHICKEN_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/chicken_carcase"),
             SKINLESS_CHICKEN_CARCASE
     );
@@ -113,17 +113,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_PIG_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_pig_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_PIG_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/skinless_pig_carcase"),
             MEATLESS_PIG_CARCASE
     );
     public static final CarcaseItem PIG_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/pig_carcase"),
             SKINLESS_PIG_CARCASE
     );
@@ -132,17 +132,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_SALMON_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_salmon_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SCALED_SALMON_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/scaled_salmon_carcase"),
             MEATLESS_SALMON_CARCASE
     );
     public static final CarcaseItem SALMON_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/salmon_carcase"),
             SCALED_SALMON_CARCASE
     );
@@ -151,17 +151,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_COD_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_cod_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SCALED_COD_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/scaled_cod_carcase"),
             MEATLESS_COD_CARCASE
     );
     public static final CarcaseItem COD_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/cod_carcase"),
             SCALED_COD_CARCASE
     );
@@ -170,17 +170,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_TROPICAL_FISH_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_tropical_fish_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SCALED_TROPICAL_FISH_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/scaled_tropical_fish_carcase"),
             MEATLESS_TROPICAL_FISH_CARCASE
     );
     public static final CarcaseItem TROPICAL_FISH_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/tropical_fish_carcase"),
             SCALED_TROPICAL_FISH_CARCASE
     );
@@ -189,17 +189,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_PUFFERFISH_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_pufferfish_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SCALED_PUFFERFISH_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/scaled_pufferfish_carcase"),
             MEATLESS_PUFFERFISH_CARCASE
     );
     public static final CarcaseItem PUFFERFISH_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/pufferfish_carcase"),
             SCALED_PUFFERFISH_CARCASE
     );
@@ -208,22 +208,22 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem TURTLE_SHELL = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/turtle_shell"),
             Items.AIR
     );
     public static final CarcaseItem MEATLESS_TURTLE_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_turtle_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SHELLESS_TURTLE_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/shelless_turtle_carcase"),
             MEATLESS_TURTLE_CARCASE
     );
     public static final CarcaseItem TURTLE_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/turtle_carcase"),
             SHELLESS_TURTLE_CARCASE
     );
@@ -232,12 +232,12 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem SQUID_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/squid_carcase"),
             Items.AIR
     );
     public static final CarcaseItem GLOW_SQUID_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/glow_squid_carcase"),
             Items.AIR
     );
@@ -245,17 +245,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_POLARBEAR_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_polarbear_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_POLARBEAR_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/skinless_polarbear_carcase"),
             MEATLESS_POLARBEAR_CARCASE
     );
     public static final CarcaseItem POLARBEAR_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/polarbear_carcase"),
             SKINLESS_POLARBEAR_CARCASE
     );
@@ -264,17 +264,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_PANDA_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_panda_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_PANDA_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/skinless_panda_carcase"),
             MEATLESS_PANDA_CARCASE
     );
     public static final CarcaseItem PANDA_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/panda_carcase"),
             SKINLESS_PANDA_CARCASE
     );
@@ -283,17 +283,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem BEE_EXOSKELETON = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/bee_exoskeleton"),
             Items.AIR
     );
     public static final CarcaseItem SHELLED_BEE_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/shelled_bee_carcase"),
             Items.AIR
     );
     public static final CarcaseItem BEE_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/bee_carcase"),
             SHELLED_BEE_CARCASE
     );
@@ -302,27 +302,27 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_EQUINE_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_equine_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_EQUINE_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/skinless_equine_carcase"),
             MEATLESS_EQUINE_CARCASE
     );
     public static final CarcaseItem HORSE_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/horse_carcase"),
             SKINLESS_EQUINE_CARCASE
     );
     public static final CarcaseItem DONKEY_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/donkey_carcase"),
             SKINLESS_EQUINE_CARCASE
     );
     public static final CarcaseItem MULE_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/mule_carcase"),
             SKINLESS_EQUINE_CARCASE
     );
@@ -331,17 +331,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_CAMEL_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_camel_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_CAMEL_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/skinless_camel_carcase"),
             MEATLESS_CAMEL_CARCASE
     );
     public static final CarcaseItem CAMEL_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/camel_carcase"),
             SKINLESS_CAMEL_CARCASE
     );
@@ -350,17 +350,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_LLAMA_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_llama_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_LLAMA_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/skinless_llama_carcase"),
             MEATLESS_LLAMA_CARCASE
     );
     public static final CarcaseItem LLAMA_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/llama_carcase"),
             SKINLESS_LLAMA_CARCASE
     );
@@ -369,17 +369,17 @@ public class Carcases {
 // ================================================================>
 
     public static final CarcaseItem MEATLESS_CAT_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/meatless_cat_carcase"),
             Items.AIR
     );
     public static final CarcaseItem SKINLESS_CAT_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/skinless_cat_carcase"),
             MEATLESS_CAT_CARCASE
     );
     public static final CarcaseItem CAT_CARCASE = new CarcaseItem(
-            new FabricItemSettings(),
+            new Item.Settings(),
             new Identifier(NAMESPACE, "carcases/cat_carcase"),
             SKINLESS_CAT_CARCASE
     );

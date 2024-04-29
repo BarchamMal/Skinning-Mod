@@ -2,10 +2,9 @@ package barch.tsm.Foods;
 
 import barch.tsm.Glue.ItemGrouped;
 import barch.tsm.Glue.ItemGrouper;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
@@ -13,19 +12,18 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.tsm.TheSkinningMod.CARCASES_GROUP;
 import static barch.tsm.TheSkinningMod.NAMESPACE;
 
 public class Meat {
 
-    public static final FoodComponent GROUND_MEAT_FOOD = new FoodComponent.Builder().meat().hunger(3).saturationModifier(1).build();
-    public static final FoodComponent HAMBURGER_FOOD = new FoodComponent.Builder().meat().hunger(4).saturationModifier(8).build();
-    public static final FoodComponent SAUSAGE_FOOD = new FoodComponent.Builder().meat().hunger(1).saturationModifier(.5f).build();
-    public static final FoodComponent COOKED_SAUSAGE_FOOD = new FoodComponent.Builder().meat().hunger(3).saturationModifier(5).build();
-    public static final FoodComponent RARE_MEAT_FOOD = new FoodComponent.Builder().meat().hunger(1).saturationModifier(.5f).build();
-    public static final FoodComponent COOKED_RARE_MEAT_FOOD = new FoodComponent.Builder().meat().hunger(7).saturationModifier(10).build();
-    public static final FoodComponent POISON_MEAT_FOOD = new FoodComponent.Builder().meat().hunger(1).saturationModifier(.5f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, 2), 0.9f).build();
-    public static final FoodComponent COOKED_TOXIC_MEAT_FOOD = new FoodComponent.Builder().meat().hunger(7).saturationModifier(10).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, 1), 0.4f).build();
+    public static final FoodComponent GROUND_MEAT_FOOD = new FoodComponent.Builder().nutrition(3).saturationModifier(1).build();
+    public static final FoodComponent HAMBURGER_FOOD = new FoodComponent.Builder().nutrition(4).saturationModifier(8).build();
+    public static final FoodComponent SAUSAGE_FOOD = new FoodComponent.Builder().nutrition(1).saturationModifier(.5f).build();
+    public static final FoodComponent COOKED_SAUSAGE_FOOD = new FoodComponent.Builder().nutrition(3).saturationModifier(5).build();
+    public static final FoodComponent RARE_MEAT_FOOD = new FoodComponent.Builder().nutrition(1).saturationModifier(.5f).build();
+    public static final FoodComponent COOKED_RARE_MEAT_FOOD = new FoodComponent.Builder().nutrition(7).saturationModifier(10).build();
+    public static final FoodComponent POISON_MEAT_FOOD = new FoodComponent.Builder().nutrition(1).saturationModifier(.5f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, 2), 0.9f).build();
+    public static final FoodComponent COOKED_TOXIC_MEAT_FOOD = new FoodComponent.Builder().nutrition(7).saturationModifier(10).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, 1), 0.4f).build();
 
 
     public static final Item CHICKEN_LEG = createFood(GROUND_MEAT_FOOD);
@@ -97,7 +95,7 @@ public class Meat {
     public static final Item COOKED_GROUND_EQUINE = createFood(GROUND_MEAT_FOOD);
 
     private static Item createFood(FoodComponent foodComponent) {
-        return new Item(new FabricItemSettings().food(foodComponent));
+        return new Item(new Item.Settings().food(foodComponent));
     }
 
     public static void registerAll() {

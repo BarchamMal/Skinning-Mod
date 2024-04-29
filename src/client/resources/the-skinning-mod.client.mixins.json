@@ -1,7 +1,7 @@
 {
 	"required": true,
 	"package": "barch.tsm.mixin.client",
-	"compatibilityLevel": "JAVA_17",
+	"compatibilityLevel": "JAVA_22",
 	"client": [
 		"TheSkinningModClientMixin"
 	],

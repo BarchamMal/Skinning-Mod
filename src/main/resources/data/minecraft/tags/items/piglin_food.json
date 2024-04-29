@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "tsm:ground_pork",
+    "tsm:cooked_ground_pork",
+    "tsm:rib",
+    "tsm:cooked_rib",
+    "tsm:sausage",
+    "tsm:cooked_sausage",
+    "tsm:ham",
+    "tsm:cooked_ham",
+    "tsm:bacon",
+    "tsm:cooked_bacon"
+  ]
+}

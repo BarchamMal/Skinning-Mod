@@ -6,5 +6,7 @@
   "ingredient": {
     "item": "tsm:<food>"
   },
-  "result": "tsm:cooked_<food>"
+  "result": {
+    "id": "tsm:cooked_<food>"
+  }
 }

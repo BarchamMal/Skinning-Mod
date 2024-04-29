@@ -58,7 +58,7 @@ t_l_c:
   meatless_llama_carcase:
     category: llama
 
-t_c_c:
+t_o_c:
   cat_carcase:
     category: cat
   skinless_cat_carcase:

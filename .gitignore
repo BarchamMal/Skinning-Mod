@@ -10,4 +10,5 @@ src/main/resources/assets/tsm/textures/item/templates/
 src/main/resources/assets/tsm/models/item/
 src/main/resources/data/minecraft/advancements/recipes/food/
 src/main/resources/data/minecraft/loot_tables/entities/
+src/main/resources/data/tsm/loot_tables/carcases/
 src/main/resources/data/tsm/recipes/

@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "tsm:squid_tentacle",
+    "tsm:cooked_squid_tentacle",
+    "tsm:glow_squid_tentacle",
+    "tsm:cooked_glow_squid_tentacle",
+    "tsm:salmon_steak",
+    "tsm:cooked_salmon_steak",
+    "tsm:cod_steak",
+    "tsm:cooked_cod_steak",
+    "tsm:tropical_fish_steak",
+    "tsm:cooked_tropical_fish_steak",
+    "tsm:pufferfish_steak",
+    "tsm:cooked_pufferfish_steak"
+  ]
+}
