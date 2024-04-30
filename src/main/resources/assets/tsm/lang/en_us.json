@@ -57,6 +57,8 @@
     "item.tsm.cooked_ground_llama": "Llama Hamburger",
     "item.tsm.ground_equine": "Ground Equine",
     "item.tsm.cooked_ground_equine": "Equine Hamburger",
+    "item.tsm.canine_steak": "Canine Steak",
+    "item.tsm.cooked_canine_steak": "Cooked Canine Steak",
 
     "item.tsm.cow_hide": "Thick Hide",
     "item.tsm.soft_hide": "Soft Hide",
@@ -118,6 +120,12 @@
     "item.tsm.bee_carcase": "Dead Bee",
     "item.tsm.shelled_bee_carcase": "Shelled Dead Bee",
     "item.tsm.bee_exoskeleton": "Bee Exoskeleton",
+    "item.tsm.fox_carcase": "Dead Fox",
+    "item.tsm.skinless_fox_carcase": "Skinned Dead Fox",
+    "item.tsm.meatless_fox_carcase": "Fox Skeleton",
+    "item.tsm.wolf_carcase": "Dead Wolf",
+    "item.tsm.skinless_wolf_carcase": "Skinned Dead Wolf",
+    "item.tsm.meatless_wolf_carcase": "Wolf Skeleton",
 
     "item.tsm.fish_scales": "Fish Scales",
     "item.tsm.colorful_fish_scales": "Colorful Fish Scales",

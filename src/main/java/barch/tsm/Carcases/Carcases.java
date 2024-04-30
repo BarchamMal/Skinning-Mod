@@ -384,6 +384,44 @@ public class Carcases {
             SKINLESS_CAT_CARCASE
     );
 
+//                               FOX
+// ================================================================>
+
+    public static final CarcaseItem MEATLESS_FOX_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/meatless_fox_carcase"),
+            Items.AIR
+    );
+    public static final CarcaseItem SKINLESS_FOX_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/skinless_fox_carcase"),
+            MEATLESS_FOX_CARCASE
+    );
+    public static final CarcaseItem FOX_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/fox_carcase"),
+            SKINLESS_FOX_CARCASE
+    );
+
+//                                WOLF
+// ================================================================>
+
+    public static final CarcaseItem MEATLESS_WOLF_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/meatless_wolf_carcase"),
+            Items.AIR
+    );
+    public static final CarcaseItem SKINLESS_WOLF_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/skinless_wolf_carcase"),
+            MEATLESS_WOLF_CARCASE
+    );
+    public static final CarcaseItem WOLF_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/wolf_carcase"),
+            SKINLESS_WOLF_CARCASE
+    );
+
 
 
 
@@ -469,6 +507,14 @@ public class Carcases {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "skinless_cat_carcase"), SKINLESS_CAT_CARCASE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cat_carcase"), CAT_CARCASE);
 
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_fox_carcase"), MEATLESS_FOX_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "skinless_fox_carcase"), SKINLESS_FOX_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "fox_carcase"), FOX_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_wolf_carcase"), MEATLESS_WOLF_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "skinless_wolf_carcase"), SKINLESS_WOLF_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "wolf_carcase"), WOLF_CARCASE);
+
 
         ItemGrouper.GroupItem(COW_HIDE, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, Items.LEATHER)});
         ItemGrouper.GroupItem(SOFT_HIDE, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, COW_HIDE)});
@@ -549,6 +595,14 @@ public class Carcases {
         ItemGrouper.GroupItem(CAT_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_LLAMA_CARCASE)});
         ItemGrouper.GroupItem(SKINLESS_CAT_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, CAT_CARCASE)});
         ItemGrouper.GroupItem(MEATLESS_CAT_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SKINLESS_CAT_CARCASE)});
+
+        ItemGrouper.GroupItem(FOX_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_CAT_CARCASE)});
+        ItemGrouper.GroupItem(SKINLESS_FOX_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, FOX_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_FOX_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SKINLESS_FOX_CARCASE)});
+
+        ItemGrouper.GroupItem(WOLF_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_FOX_CARCASE)});
+        ItemGrouper.GroupItem(SKINLESS_WOLF_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, WOLF_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_WOLF_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SKINLESS_WOLF_CARCASE)});
 
 
     }

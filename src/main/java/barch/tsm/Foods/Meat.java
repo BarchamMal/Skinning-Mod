@@ -93,6 +93,8 @@ public class Meat {
     public static final Item COOKED_GROUND_LLAMA = createFood(GROUND_MEAT_FOOD);
     public static final Item GROUND_EQUINE = createFood(GROUND_MEAT_FOOD);
     public static final Item COOKED_GROUND_EQUINE = createFood(GROUND_MEAT_FOOD);
+    public static final Item CANINE_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_CANINE_STEAK = createFood(GROUND_MEAT_FOOD);
 
     private static Item createFood(FoodComponent foodComponent) {
         return new Item(new Item.Settings().food(foodComponent));
@@ -169,6 +171,8 @@ public class Meat {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_ground_llama"), COOKED_GROUND_LLAMA);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ground_equine"), GROUND_EQUINE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_ground_equine"), COOKED_GROUND_EQUINE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "canine_steak"), CANINE_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_canine_steak"), COOKED_CANINE_STEAK);
 
 
 
@@ -243,6 +247,9 @@ public class Meat {
         ItemGrouper.GroupItem(COOKED_GROUND_LLAMA, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GROUND_LLAMA)});
         ItemGrouper.GroupItem(GROUND_EQUINE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_GROUND_LLAMA)});
         ItemGrouper.GroupItem(COOKED_GROUND_EQUINE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GROUND_EQUINE)});
+
+        ItemGrouper.GroupItem(CANINE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_GROUND_EQUINE)});
+        ItemGrouper.GroupItem(COOKED_CANINE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, CANINE_STEAK)});
 
 
 

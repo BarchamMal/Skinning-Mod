@@ -43,3 +43,7 @@ loot_tables:
     - turtle
   squid:
     - squid
+  fox:
+    - fox
+  wolf:
+    - wolf

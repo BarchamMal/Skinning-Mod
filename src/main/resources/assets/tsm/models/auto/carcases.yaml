@@ -137,3 +137,19 @@ t_tf_c:
     category: tropical_fish
   meatless_tropical_fish_carcase:
     category: tropical_fish
+
+t_f_c:
+  fox_carcase:
+    category: fox
+  skinless_fox_carcase:
+    category: fox
+  meatless_fox_carcase:
+    category: fox
+
+t_w_c:
+  wolf_carcase:
+    category: wolf
+  skinless_wolf_carcase:
+    category: wolf
+  meatless_wolf_carcase:
+    category: wolf

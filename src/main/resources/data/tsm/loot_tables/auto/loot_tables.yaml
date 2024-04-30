@@ -216,3 +216,23 @@ skinless_cat_carcase:
 meatless_cat_carcase:
   minecraft:bone: 2
   minecraft:bone_meal: 4
+
+fox_carcase:
+  tsm:fur: 8
+
+skinless_fox_carcase:
+  tsm:canine_steak: 10
+  tsm:intestine: 6
+
+meatless_fox_carcase:
+  minecraft:bone: 6
+
+wolf_carcase:
+  tsm:fur: 12
+
+skinless_wolf_carcase:
+  tsm:canine_steak: 16
+  tsm:intestine: 8
+
+meatless_wolf_carcase:
+  minecraft:bone: 8
