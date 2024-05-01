@@ -135,6 +135,12 @@
     "item.tsm.fur": "Fur",
     "item.tsm.stinger": "Stinger",
 
+    "item.tsm.salvaged_colorful_fish_scales": "Salvaged Colorful Fish Scales",
+    "item.tsm.large_colorful_fish_scale": "Large Colorful Fish Scale",
+    "item.tsm.salvaged_fish_scales": "Salvaged Fish Scales",
+    "item.tsm.large_fish_scale": "Large Fish Scale",
+    
+
     "itemGroup.tsm.tsm": "The Skinning Mod", 
     "itemGroup.tsm.animal_byproducts": "Animal Byproducts",
     "itemGroup.tsm.carcases": "Carcases"

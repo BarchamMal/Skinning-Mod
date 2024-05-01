@@ -1,5 +1,6 @@
 package barch.tsm;
 
+import barch.tsm.Armor.ArmorItems;
 import barch.tsm.Carcases.AnimalByproducts;
 import barch.tsm.Carcases.Carcases;
 import barch.tsm.Foods.Meat;
@@ -62,6 +63,7 @@ public class TheSkinningMod implements ModInitializer {
 
 		Carcases.onInitialize();
 		AnimalByproducts.onInitialize();
+		ArmorItems.onInitialize();
 		Meat.registerAll();
 
 
