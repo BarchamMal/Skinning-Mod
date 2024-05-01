@@ -220,7 +220,7 @@ public class Meat {
 
         ItemGrouper.GroupItem(TURTLE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_POISONOUS_FISH_STEAK)});
         ItemGrouper.GroupItem(COOKED_TURTLE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, TURTLE_STEAK)});
-        ItemGrouper.GroupItem(SQUID_TENTACLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, TURTLE_STEAK)});
+        ItemGrouper.GroupItem(SQUID_TENTACLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_TURTLE_STEAK)});
         ItemGrouper.GroupItem(COOKED_SQUID_TENTACLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, SQUID_TENTACLE)});
         ItemGrouper.GroupItem(GLOW_SQUID_TENTACLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_SQUID_TENTACLE)});
         ItemGrouper.GroupItem(COOKED_GLOW_SQUID_TENTACLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GLOW_SQUID_TENTACLE)});

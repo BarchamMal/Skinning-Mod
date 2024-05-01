@@ -19,6 +19,8 @@ public class AnimalByproducts {
     public static final Item LARGE_SCUTE = new Item(new Item.Settings());
     public static final Item FUR = new Item(new Item.Settings());
 
+    public static final Item STINGER = new Item(new Item.Settings());
+
     public static void onInitialize() {
 
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "fish_scales"), FISH_SCALES);
@@ -27,7 +29,7 @@ public class AnimalByproducts {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "pufferfish_spike"), PUFFERFISH_SPIKE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "large_scute"), LARGE_SCUTE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "fur"), FUR);
-
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "stinger"), STINGER);
 
         ItemGrouper.GroupItem(FISH_SCALES, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, Items.AIR)});
         ItemGrouper.GroupItem(INTESTINE, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, FISH_SCALES)});
@@ -35,6 +37,7 @@ public class AnimalByproducts {
         ItemGrouper.GroupItem(PUFFERFISH_SPIKE, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, COLORFUL_FISH_SCALES)});
         ItemGrouper.GroupItem(LARGE_SCUTE, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, PUFFERFISH_SPIKE)});
         ItemGrouper.GroupItem(FUR, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, LARGE_SCUTE)});
+        ItemGrouper.GroupItem(STINGER, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, FUR)});
 
     }
 
