@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "minecraft:string"
+    },
+    "F": {
+      "item": "minecraft:black_dye"
+    }
+  },
+  "pattern": [
+    "FX",
+    "XX",
+    "XX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tsm:strap"
+  }
+}

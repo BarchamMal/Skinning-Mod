@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "E": {
+      "item": "tsm:empty_upgrade_kit"
+    },
+    "L": {
+      "item": "tsm:large_colorful_fish_scale"
+    }
+  },
+  "pattern": [
+    "GGG",
+    " E ",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tsm:gold_upgrade_kit"
+  }
+}

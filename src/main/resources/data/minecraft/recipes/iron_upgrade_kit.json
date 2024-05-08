@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "E": {
+      "item": "tsm:empty_upgrade_kit"
+    },
+    "L": {
+      "item": "tsm:large_fish_scale"
+    }
+  },
+  "pattern": [
+    "III",
+    " E ",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tsm:iron_upgrade_kit"
+  }
+}

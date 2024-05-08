@@ -7,6 +7,7 @@
 - cat_meat
 - chicken_leg
 - chicken_wing
+- chisel
 - cod_steak
 - colorful_fish_scales
 - cooked_bacon
@@ -41,10 +42,14 @@
 - cooked_turtle_steak
 - cow_hide
 - down
+- diamond_upgrade_kit
+- empty_upgrade_kit
 - equine_steak
 - fish_scales
 - fur
 - glow_squid_tentacle
+- glue
+- gold_upgrade_kit
 - ground_bear
 - ground_beef
 - ground_camel
@@ -54,6 +59,7 @@
 - ground_pork
 - ham
 - intestine
+- iron_upgrade_kit
 - large_colorful_fish_scale
 - large_fish_scale
 - large_scute
@@ -70,6 +76,7 @@
 - soft_hide
 - squid_tentacle
 - stinger
+- strap
 - tongue
 - tropical_fish_steak
 - turtle_steak

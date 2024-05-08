@@ -139,6 +139,13 @@
     "item.tsm.large_colorful_fish_scale": "Large Colorful Fish Scale",
     "item.tsm.salvaged_fish_scales": "Salvaged Fish Scales",
     "item.tsm.large_fish_scale": "Large Fish Scale",
+    "item.tsm.strap": "Strap",
+    "item.tsm.chisel": "Chisel",
+    "item.tsm.glue": "Glue",
+    "item.tsm.empty_upgrade_kit": "Empty Upgrade Kit",
+    "item.tsm.iron_upgrade_kit": "Iron Upgrade Kit",
+    "item.tsm.gold_upgrade_kit": "Gold Upgrade Kit",
+    "item.tsm.diamond_upgrade_kit": "Diamond Upgrade Kit",
     
 
     "itemGroup.tsm.tsm": "The Skinning Mod", 
