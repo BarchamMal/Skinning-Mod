@@ -25,6 +25,8 @@ skinless_cow_carcase:
 
 cow_carcase:
   tsm:cow_hide: 1
+  tsm:reality_essence_water: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
 
 meatless_sheep_carcase:
   minecraft:bone: 8
@@ -36,6 +38,8 @@ skinless_sheep_carcase:
 
 sheep_carcase:
   tsm:soft_hide: 1
+  tsm:reality_essence_fire: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
 
 meatless_chicken_carcase:
   minecraft:bone: 2
@@ -48,6 +52,8 @@ skinless_chicken_carcase:
 
 chicken_carcase:
   minecraft:feather: 32
+  tsm:reality_essence_air: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
 
 meatless_pig_carcase:
   minecraft:bone: 8
@@ -61,6 +67,8 @@ skinless_pig_carcase:
 
 pig_carcase:
   tsm:soft_hide: 1
+  tsm:reality_essence_nature: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
 
 meatless_salmon_carcase:
   minecraft:bone: 2
@@ -72,6 +80,9 @@ scaled_salmon_carcase:
 
 salmon_carcase:
   tsm:fish_scales: 8
+  tsm:reality_essence_water: "minecraft:air"
+  tsm:reality_essence_nature: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
 
 meatless_cod_carcase:
   minecraft:bone: 2
@@ -83,6 +94,9 @@ scaled_cod_carcase:
 
 cod_carcase:
   tsm:fish_scales: 8
+  tsm:reality_essence_water: "minecraft:air"
+  tsm:reality_essence_nature: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
 
 meatless_tropical_fish_carcase:
   minecraft:bone: 2
@@ -94,6 +108,9 @@ scaled_tropical_fish_carcase:
 
 tropical_fish_carcase:
   tsm:colorful_fish_scales: 8
+  tsm:reality_essence_water: "minecraft:air"
+  tsm:reality_essence_nature: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
 
 meatless_pufferfish_carcase:
   minecraft:bone: 2
@@ -106,6 +123,10 @@ scaled_pufferfish_carcase:
 
 pufferfish_carcase:
   tsm:pufferfish_spike: 16
+  tsm:reality_essence_water: "minecraft:air"
+  tsm:reality_essence_nature: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
+  tsm:reality_essence_force: "minecraft:air"
 
 turtle_shell:
   tsm:large_scute: 14
@@ -119,14 +140,26 @@ shelless_turtle_carcase:
 
 turtle_carcase:
   tsm:turtle_shell: 1
+  tsm:reality_essence_water: "minecraft:air"
+  tsm:reality_essence_nature: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
+  tsm:reality_essence_force: "minecraft:air"
 
 squid_carcase:
   tsm:squid_tentacle: 10
   minecraft:ink_sac: 4
+  tsm:reality_essence_water: "minecraft:air"
+  tsm:reality_essence_nature: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
+  tsm:reality_essence_darkness: "minecraft:air"
 
 glow_squid_carcase:
   tsm:glow_squid_tentacle: 10
   minecraft:glow_ink_sac: 4
+  tsm:reality_essence_water: "minecraft:air"
+  tsm:reality_essence_nature: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
+  tsm:reality_essence_light: "minecraft:air"
 
 bear_hide:
   minecraft:leather: 24
@@ -134,6 +167,9 @@ bear_hide:
 
 panda_carcase:
   tsm:bear_hide: 1
+  tsm:reality_essence_nature: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
+  tsm:reality_essence_fire: "minecraft:air"
 
 skinless_panda_carcase:
   tsm:bear_steak: 32
@@ -145,6 +181,9 @@ meatless_panda_carcase:
 
 polarbear_carcase:
   tsm:bear_hide: 1
+  tsm:reality_essence_nature: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
+  tsm:reality_essence_ice: "minecraft:air"
 
 skinless_polarbear_carcase:
   tsm:bear_steak: 48
@@ -159,12 +198,17 @@ bee_carcase:
 
 shelled_bee_carcase:
   tsm:bee_steak: 8
+  tsm:reality_essence_air: "minecraft:air"
+  tsm:reality_essence_nature: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
+  tsm:reality_essence_death: "minecraft:air"
 
 bee_exoskeleton:
   minecraft:bone_meal: 12
 
 horse_carcase:
   tsm:cow_hide: 1
+  tsm:reality_essence_life: "minecraft:air"
 
 skinless_equine_carcase:
   tsm:equine_steak: 32
@@ -173,15 +217,19 @@ skinless_equine_carcase:
 
 meatless_equine_carcase:
   minecraft:bone: 16
+  tsm:reality_essence_earth: "minecraft:air"
+  tsm:reality_essence_death: "minecraft:air"
 
 donkey_carcase:
   tsm:cow_hide: 1
+  tsm:reality_essence_life: "minecraft:air"
 
 mule_carcase:
   tsm:cow_hide: 1
 
 camel_carcase:
   tsm:cow_hide: 1
+  tsm:reality_essence_life: "minecraft:air"
 
 skinless_camel_carcase:
   tsm:camel_steak: 40
@@ -195,6 +243,8 @@ meatless_camel_carcase:
 
 llama_carcase:
   tsm:woolly_hide: 1
+  tsm:reality_essence_earth: "minecraft:air"
+  tsm:reality_essence_life: "minecraft:air"
 
 skinless_llama_carcase:
   tsm:llama_steak:  32
@@ -208,6 +258,9 @@ meatless_llama_carcase:
 
 cat_carcase:
   tsm:fur: 4
+  tsm:reality_essence_life: "minecraft:air"
+  tsm:reality_essence_fire: "minecraft:air"
+  tsm:reality_essence_force: "minecraft:air"
 
 skinless_cat_carcase:
   tsm:cat_meat: 6
@@ -219,6 +272,9 @@ meatless_cat_carcase:
 
 fox_carcase:
   tsm:fur: 8
+  tsm:reality_essence_life: "minecraft:air"
+  tsm:reality_essence_fire: "minecraft:air"
+  tsm:reality_essence_force: "minecraft:air"
 
 skinless_fox_carcase:
   tsm:canine_steak: 10
@@ -229,6 +285,9 @@ meatless_fox_carcase:
 
 wolf_carcase:
   tsm:fur: 12
+  tsm:reality_essence_life: "minecraft:air"
+  tsm:reality_essence_fire: "minecraft:air"
+  tsm:reality_essence_force: "minecraft:air"
 
 skinless_wolf_carcase:
   tsm:canine_steak: 16

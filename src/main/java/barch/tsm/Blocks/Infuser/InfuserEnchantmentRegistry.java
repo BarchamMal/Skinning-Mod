@@ -1,6 +1,7 @@
 package barch.tsm.Blocks.Infuser;
 
 import barch.tsm.Armor.ArmorItems;
+import barch.tsm.Blocks.InfuserRegister;
 import barch.tsm.Carcases.AnimalByproducts;
 import barch.tsm.Foods.Meat;
 import net.minecraft.enchantment.Enchantment;
@@ -94,20 +95,20 @@ public class InfuserEnchantmentRegistry {
 
     public static void RegisterAll() {
 
-        InfuserEnchantmentRegistry.register(Items.BLAZE_POWDER, "fire");
-        InfuserEnchantmentRegistry.register(Items.ICE, "water");
-        InfuserEnchantmentRegistry.register(Items.STONE, "earth");
-        InfuserEnchantmentRegistry.register(Items.PHANTOM_MEMBRANE, "air");
-        InfuserEnchantmentRegistry.register(Items.NETHER_WART, "magic");
-        InfuserEnchantmentRegistry.register(Items.WHEAT_SEEDS, "nature");
-        InfuserEnchantmentRegistry.register(Items.GLISTERING_MELON_SLICE, "life");
-        InfuserEnchantmentRegistry.register(Items.ROTTEN_FLESH, "death");
-        InfuserEnchantmentRegistry.register(Items.IRON_INGOT, "force");
-        InfuserEnchantmentRegistry.register(Items.END_STONE, "void");
-        InfuserEnchantmentRegistry.register(Items.GLOWSTONE_DUST, "light");
-        InfuserEnchantmentRegistry.register(Items.SCULK, "darkness");
-        InfuserEnchantmentRegistry.register(Items.BLUE_ICE, "cold");
-        InfuserEnchantmentRegistry.register(Items.LIGHTNING_ROD, "electric");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_FIRE, "fire");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_WATER, "water");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_EARTH, "earth");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_AIR, "air");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_MAGIC, "magic");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_NATURE, "nature");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_LIFE, "life");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_DEATH, "death");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_FORCE, "force");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_VOID, "void");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_LIGHT, "light");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_DARKNESS, "darkness");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_ICE, "cold");
+        InfuserEnchantmentRegistry.register(InfuserRegister.REALITY_ESSENCE_ELECTRICITY, "electricity");
 
         InfuserEnchantmentRegistry.register("fire", Enchantments.FIRE_ASPECT);
         InfuserEnchantmentRegistry.register("fire", Enchantments.FLAME);
@@ -140,8 +141,8 @@ public class InfuserEnchantmentRegistry {
         InfuserEnchantmentRegistry.register("light", Enchantments.INFINITY);
         InfuserEnchantmentRegistry.register("light", Enchantments.QUICK_CHARGE);
         InfuserEnchantmentRegistry.register("cold", Enchantments.FIRE_PROTECTION);
-        InfuserEnchantmentRegistry.register("electric", Enchantments.THORNS);
-        InfuserEnchantmentRegistry.register("electric", Enchantments.CHANNELING);
+        InfuserEnchantmentRegistry.register("electricity", Enchantments.THORNS);
+        InfuserEnchantmentRegistry.register("electricity", Enchantments.CHANNELING);
 
         InfuserEnchantmentRegistry.register(Items.HONEYCOMB, Enchantments.FIRE_ASPECT);
         InfuserEnchantmentRegistry.register(Items.FIRE_CHARGE, Enchantments.FLAME);
