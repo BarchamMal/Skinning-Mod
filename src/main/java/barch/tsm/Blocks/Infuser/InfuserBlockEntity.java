@@ -217,8 +217,6 @@ public class InfuserBlockEntity extends LockableContainerBlockEntity implements 
                 mainEnchantmentItem = item;
                 // Randomly determine if the enchantment item takes precedence based on its count
                 int rand = random.nextInt(9) + 1;
-                LOGGER.info("Random number = " + rand);
-                LOGGER.info("The amount of enchantment items is " + enchantmentItems.get(item));
                 if (rand <= enchantmentItems.get(item)) {
                     enchantmentItemTakesPrecedence = true;
                     break;
@@ -236,7 +234,6 @@ public class InfuserBlockEntity extends LockableContainerBlockEntity implements 
         Enchantment mainEnchantment = null;
         int mainEnchantmentLevel = 0;
 
-        LOGGER.info("Does the enchantment take precedence? " + enchantmentItemTakesPrecedence);
         if (enchantmentItemTakesPrecedence) {
             // Determine the main enchantment and its level based on the main enchantment item and main element item
             mainElementItem = InfuserEnchantmentRegistry.getItemFromElement(
