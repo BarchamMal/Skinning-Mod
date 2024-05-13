@@ -1,6 +1,8 @@
 package barch.tsm;
 
 import barch.tsm.Armor.ArmorItems;
+import barch.tsm.Blocks.Infuser.InfuserEnchantmentRegistry;
+import barch.tsm.Blocks.InfuserRegister;
 import barch.tsm.Carcases.AnimalByproducts;
 import barch.tsm.Carcases.Carcases;
 import barch.tsm.Foods.Meat;
@@ -65,6 +67,8 @@ public class TheSkinningMod implements ModInitializer {
 		AnimalByproducts.onInitialize();
 		ArmorItems.onInitialize();
 		Meat.registerAll();
+		InfuserRegister.Register();
+		InfuserEnchantmentRegistry.RegisterAll();
 
 
 	}

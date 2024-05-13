@@ -146,7 +146,8 @@
     "item.tsm.iron_upgrade_kit": "Iron Upgrade Kit",
     "item.tsm.gold_upgrade_kit": "Gold Upgrade Kit",
     "item.tsm.diamond_upgrade_kit": "Diamond Upgrade Kit",
-    
+
+    "container.infuser": "Magic Infuser",
 
     "itemGroup.tsm.tsm": "The Skinning Mod", 
     "itemGroup.tsm.animal_byproducts": "Animal Byproducts",
