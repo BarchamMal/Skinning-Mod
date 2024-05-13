@@ -124,7 +124,7 @@ def rare_table(item_name: str, count: str) -> dict:
             {
                 "type": "minecraft:item",
                 "name": count,  # Value item
-                "weight": 25,  # Weight for the value item to drop
+                "weight": 49,  # Weight for the value item to drop
                 "functions": [
                     {
                         "function": "minecraft:set_count",
