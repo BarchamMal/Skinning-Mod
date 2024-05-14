@@ -1,7 +1,7 @@
 # Script deletion configuration
 script_deletion:
-  create_carcases.py: false
-  create_simple_items.py: false
-  make_recipe_advancements.py: false
-  create_entity_tables.py: false
-  loot_table_generator.py: false
+  create_carcases.py: true
+  create_simple_items.py: true
+  make_recipe_advancements.py: true
+  create_entity_tables.py: true
+  loot_table_generator.py: true
