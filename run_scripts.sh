@@ -6,7 +6,7 @@
 #              advancements, and loot tables for a Minecraft mod project.
 # Author: BarchamMal
 # Date: 2024-04-24
-# Version: 1.0
+# Version: 1.1
 ################################################################################
 
 # Change directory to the location of the script
