@@ -13,7 +13,5 @@ public class TheSkinningModClient implements ClientModInitializer {
 
 		HandledScreens.register(InfuserRegister.INFUSER_SCREEN_HANDLER, InfuserScreen::new);
 
-
-
 	}
 }
