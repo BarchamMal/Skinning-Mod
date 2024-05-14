@@ -8,11 +8,12 @@ This script converts YAML loot table data to JSON loot tables. It can handle the
 - MultiItem type
 
 Usage:
-    python yaml_to_json.py <yaml_file> <output_dir>
+    python loot_table_generator.py <yaml_file> <output_dir>
 
 Args:
     yaml_file (str): Path to the input YAML file containing loot table data.
     output_dir (str): Directory to save the generated JSON loot tables.
+    config_yaml (str): Yaml config file containing the script deletion configuration.
 
 Examples:
     - Single item quantity:
@@ -57,8 +58,11 @@ def delete(path: str = None):
     Returns:
         None
     """
-    return
-    os.remove(path)
+    if os.path.exists(path):
+        print(f"Deleting file: {path}")
+        os.remove(path)
+    else:
+        print(f"Could not find file: {path}")
 
 def single_table(item_name: str, count: int) -> dict:
     """
@@ -207,13 +211,14 @@ def min_max_table(item_name: str, count: list) -> dict:
     }
     return pool
 
-def create_loot_table(yaml_file: str, output_dir: str):
+def create_loot_table(yaml_file: str, output_dir: str, config_file: str):
     """
     Convert YAML loot table data to JSON loot tables.
 
     Args:
         yaml_file (str): Path to the input YAML file containing loot table data.
         output_dir (str): Directory to save the generated JSON loot tables.
+        config_file (str): Config file containing the script deletion configuration
 
     Returns:
         None
@@ -248,11 +253,15 @@ def create_loot_table(yaml_file: str, output_dir: str):
                     
                     loot_table["pools"].append(pool)
                 
-                with open(output_file, 'w') as outfile:
-                    json.dump(loot_table, outfile, indent=2)
-                if over: print(f"Overwriting existing file: {output_file}")
-                else: print(f"Created loot table: {output_file}")
-                delete(output_file)
+                if yaml.safe_load(open(config_file))['script_deletion']['loot_table_generator.py']:
+                    if over: print(f"Overwriting existing file: {output_file}")
+                    else: print(f"Creating loot table: {output_file}")
+                    
+                    # Write the updated JSON data to the output file
+                    with open(output_file, 'w') as outfile:
+                        json.dump(loot_table, outfile, indent=2)
+                else:
+                    delete(output_file)
         except yaml.YAMLError as exc:
             print(exc)
 
@@ -261,14 +270,16 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Convert YAML to JSON loot tables")
     parser.add_argument("yaml_file", help="Input YAML file containing loot table data")
     parser.add_argument("output_dir", help="Output directory to save JSON loot tables")
+    parser.add_argument("config_yaml", help="Yaml config file containing the script deletion configuration")
     args = parser.parse_args()
 
     yaml_file = args.yaml_file
     output_dir = args.output_dir
+    config_file = args.config_yaml
 
     # Create the output directory if it doesn't exist
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     # Convert YAML loot tables to JSON
-    create_loot_table(yaml_file, output_dir)
+    create_loot_table(yaml_file, output_dir, config_file)

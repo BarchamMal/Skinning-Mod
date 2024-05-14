@@ -31,10 +31,13 @@ def delete(path: str = None):
     Returns:
         None
     """
-    return
-    os.remove(path)
+    if os.path.exists(path):
+        print(f"Deleting file: {path}")
+        os.remove(path)
+    else:
+        print(f"Could not find file: {path}")
 
-def update_recipe_files(template, foods_yaml, output_dir):
+def update_recipe_files(template, foods_yaml, output_dir, config_file):
     """
     Update recipe and advancement files based on food items.
 
@@ -42,6 +45,7 @@ def update_recipe_files(template, foods_yaml, output_dir):
         template (str): Path to the template file containing JSON data for recipes or advancements.
         foods_yaml (str): Path to the YAML file containing the list of food items.
         output_dir (str): Directory to save the updated JSON files.
+        config_file (str): Config file containing the script deletion configuration
     """
     # Read the list of food items from the YAML file
     with open(foods_yaml, 'r') as yaml_file:
@@ -88,13 +92,15 @@ def update_recipe_files(template, foods_yaml, output_dir):
             if os.path.exists(output_file):
                 over = True
 
-            # Write the updated JSON data to the output file
-            with open(output_file, 'w') as outputfile:
-                outputfile.write(file)
-
-            if over: print(f"Overwriting existing file: {output_file}")
-            else: print(f"Created recipe or advancement: {output_file}")
-            delete(output_file)
+            if yaml.safe_load(open(config_file))['script_deletion']['make_recipe_advancements.py']:
+                if over: print(f"Overwriting existing file: {output_file}")
+                else: print(f"Creating recipe or advancement: {output_file}")
+                
+                # Write the updated JSON data to the output file
+                with open(output_file, 'w') as outputfile:
+                    outputfile.write(file)
+            else:
+                delete(output_file)
 
             i+=1
 
@@ -104,7 +110,8 @@ if __name__ == "__main__":
     parser.add_argument("template", help="Path to the template file containing JSON data for recipes or advancements")
     parser.add_argument("foods", help="Path to the YAML file containing the list of food items")
     parser.add_argument("output_dir", help="Output directory to save updated JSON files")
+    parser.add_argument("config_yaml", help="Yaml config file containing the script deletion configuration")
     args = parser.parse_args()
 
     # Call the function to update recipe and advancement files
-    update_recipe_files(args.template, args.foods, args.output_dir)
+    update_recipe_files(args.template, args.foods, args.output_dir, args.config_yaml)

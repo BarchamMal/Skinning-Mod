@@ -4,7 +4,7 @@ Simple Item Model Creator
 This script creates simple generated item models based on a YAML list of item names and saves them to the specified output directory.
 
 Usage:
-    python create_item_models.py <yaml_file> <output_dir>
+    python create_simple_items.py <yaml_file> <output_dir>
 
 Args:
     yaml_file (str): Path to the input YAML file containing a list of item names.
@@ -12,14 +12,13 @@ Args:
 
 Examples:
     - YAML file:
-        items:
-          sword
-          shield
-          pickaxe
-          axe
+        sword
+        shield
+        pickaxe
+        axe
 
     - Command:
-        python create_item_models.py items.yaml models/items
+        python create_simple_items.py items.yaml models/items
 
     - Output:
         - models/items/sword.json
@@ -43,16 +42,20 @@ def delete(path: str = None):
     Returns:
         None
     """
-    return
-    os.remove(path)
+    if os.path.exists(path):
+        print(f"Deleting file: {path}")
+        os.remove(path)
+    else:
+        print(f"Could not find file: {path}")
 
-def create_item_models(yaml_file, output_dir):
+def create_item_models(yaml_file, output_dir, config_file):
     """
     Create simple item models from a YAML list and save them to the output directory.
 
     Args:
         yaml_file (str): Path to the input YAML file containing a list of item names.
         output_dir (str): Output directory to save item models.
+        config_file (str): Config file containing the script deletion configuration
 
     Returns:
         None
@@ -73,11 +76,16 @@ def create_item_models(yaml_file, output_dir):
                     }
                 }
 
-                with open(output_file, 'w') as outfile:
-                    json.dump(item_model, outfile, indent=2)
-                if over: print(f"Overwriting existing file: {output_file}")
-                else: print(f"Created item model: {output_file}")
-                delete(output_file)
+                if yaml.safe_load(open(config_file))['script_deletion']['create_simple_items.py']:
+                    if over: 
+                        print(f"Overwriting existing file: {output_file}")
+                    else: 
+                        print(f"Creating item model: {output_file}")
+
+                    with open(output_file, 'w') as outfile:
+                        json.dump(item_model, outfile, indent=2)
+                else:
+                    delete(output_file)
         except yaml.YAMLError as exc:
             print(exc)
 
@@ -85,12 +93,14 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create simple item models from a YAML list")
     parser.add_argument("yaml_file", help="Input YAML file containing a list of item names")
     parser.add_argument("output_dir", help="Output directory to save item models")
+    parser.add_argument("config_yaml", help="Yaml config file containing the script deletion configuration")
     args = parser.parse_args()
 
     yaml_file = args.yaml_file
     output_dir = args.output_dir
+    config_file = args.config_yaml
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    create_item_models(yaml_file, output_dir)
+    create_item_models(yaml_file, output_dir, config_file)

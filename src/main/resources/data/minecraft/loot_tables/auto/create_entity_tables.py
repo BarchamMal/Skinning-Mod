@@ -4,7 +4,7 @@ Entity Loot Table Creator
 This script creates JSON loot tables for entities dropping one item (their carcase) based on a YAML file and saves them to the specified output directory.
 
 Usage:
-    python create_entity_loot_table.py <yaml_file> <output_dir>
+    python create_entity_tables.py <yaml_file> <output_dir>
 
 Args:
     yaml_file (str): Path to the input YAML file containing a list of entities.
@@ -33,7 +33,7 @@ Examples:
             - skeleton_horse
 
     - Command:
-        python create_entity_loot_table.py entities.yaml loot_tables
+        python create_entity_tables.py entities.yaml loot_tables
 
     - Output:
         - loot_tables/bee.json
@@ -61,16 +61,20 @@ def delete(path: str = None):
     Returns:
         None
     """
-    return
-    os.remove(path)
+    if os.path.exists(path):
+        print(f"Deleting file: {path}")
+        os.remove(path)
+    else:
+        print(f"Could not find file: {path}")
 
-def create_entity_loot_table(entities, output_dir):
+def create_entity_loot_table(entities, output_dir, config_file):
     """
     Create JSON loot tables for entities dropping one item (their carcase) and save them to the output directory.
 
     Args:
         entities (dict): Dictionary containing entities and their associated carcases.
         output_dir (str): Output directory to save JSON loot tables.
+        config_file (str): Config file containing the script deletion configuration
 
     Returns:
         None
@@ -106,21 +110,26 @@ def create_entity_loot_table(entities, output_dir):
                 "random_sequence": f"minecraft:entities/{carcase}"
             }
 
-            with open(output_file, 'w') as outfile:
-                json.dump(loot_table, outfile, indent=2)
-            
-            if over: print(f"Overwriting existing file: {output_file}")
-            else: print(f"Created loot table: {output_file}")
-            delete(output_file)
+            if yaml.safe_load(open(config_file))['script_deletion']['create_entity_tables.py']:
+                if over: print(f"Overwriting existing file: {output_file}")
+                else: print(f"Creating loot table: {output_file}")
+                
+                # Write the updated JSON data to the output file
+                with open(output_file, 'w') as outfile:
+                    json.dump(loot_table, outfile, indent=2)
+            else:
+                delete(output_file)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create JSON loot tables for entities dropping one item (their carcase)")
     parser.add_argument("yaml_file", help="Input YAML file containing a list of entities")
     parser.add_argument("output_dir", help="Output directory to save JSON loot tables")
+    parser.add_argument("config_yaml", help="Yaml config file containing the script deletion configuration")
     args = parser.parse_args()
 
     yaml_file = args.yaml_file
     output_dir = args.output_dir
+    config_file = args.config_yaml
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -129,6 +138,6 @@ if __name__ == "__main__":
         try:
             data = yaml.safe_load(stream)
             entities = data.get("loot_tables", [])
-            create_entity_loot_table(entities, output_dir)
+            create_entity_loot_table(entities, output_dir, config_file)
         except yaml.YAMLError as exc:
             print(exc)

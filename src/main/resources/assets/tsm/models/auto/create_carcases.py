@@ -60,16 +60,20 @@ def delete(path: str = None):
     Returns:
         None
     """
-    return
-    os.remove(path)
+    if os.path.exists(path):
+        print(f"Deleting file: {path}")
+        os.remove(path)
+    else:
+        print(f"Could not find file: {path}")
 
-def create_carcase_models(yaml_file, output_dir):
+def create_carcase_models(yaml_file, output_dir, config_file):
     """
     Create carcase item models from a YAML dictionary and save them to the output directory.
 
     Args:
         yaml_file (str): Path to the input YAML file containing dictionaries of item names and categories.
         output_dir (str): Output directory to save carcase item models.
+        config_file (str): Config file containing the script deletion configuration.
 
     Returns:
         None
@@ -92,12 +96,15 @@ def create_carcase_models(yaml_file, output_dir):
                         }
                     }
 
-                    with open(output_file, 'w') as outfile:
-                        json.dump(item_model, outfile, indent=2)
-            
-                    if over: print(f"Overwriting existing file: {output_file}")
-                    else: print(f"Created carcase model: {output_file}")
-                    delete(output_file)
+                    if yaml.safe_load(open(config_file))['script_deletion']['create_carcases.py']:
+                        if over:
+                            print(f"Overwriting existing file: {output_file}")
+                        else:
+                            print(f"Creating carcase model: {output_file}")
+                        with open(output_file, 'w') as outfile:
+                            outfile.write(json.dumps(item_model))
+                    else:
+                        delete(output_file)
         except yaml.YAMLError as exc:
             print(exc)
 
@@ -105,12 +112,14 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create item models from a YAML dictionary")
     parser.add_argument("yaml_file", help="Input YAML file containing dictionaries of item names and categories")
     parser.add_argument("output_dir", help="Output directory to save carcase item models")
+    parser.add_argument("config_file", help="Config file containing the script deletion configuration")
     args = parser.parse_args()
 
     yaml_file = args.yaml_file
     output_dir = args.output_dir
+    config_file = args.config_file
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    create_carcase_models(yaml_file, output_dir)
+    create_carcase_models(yaml_file, output_dir, config_file)
