@@ -37,12 +37,14 @@
 - cooked_salmon_steak
 - cooked_sausage
 - cooked_squid_tentacle
+- cooked_strider_steak
 - cooked_tongue
 - cooked_tropical_fish_steak
 - cooked_turtle_steak
 - cow_hide
 - down
 - diamond_upgrade_kit
+- ectoplasm
 - empty_upgrade_kit
 - equine_steak
 - fish_scales
@@ -83,6 +85,7 @@
 - reality_essence_void
 - reality_essence_water
 - rib
+- rotten_steak
 - salmon_steak
 - salvaged_colorful_fish_scales
 - salvaged_fish_scales
@@ -91,7 +94,9 @@
 - squid_tentacle
 - stinger
 - strap
+- strider_steak
 - tongue
 - tropical_fish_steak
 - turtle_steak
+- wither_bone
 - woolly_hide

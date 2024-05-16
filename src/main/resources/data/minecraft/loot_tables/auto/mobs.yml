@@ -47,3 +47,29 @@ loot_tables:
     - fox
   wolf:
     - wolf
+  magma_cube:
+    - magma_cube
+  ghast:
+    - ghast
+  piglin:
+    - piglin
+    - piglin_brute
+  skeleton:
+    - skeleton
+  stray:
+    - stray
+  zombified_piglin:
+    - zombified_piglin
+  hoglin:
+    - hoglin
+  zoglin:
+    - zoglin
+  wither_skeleton:
+    - wither_skeleton
+  strider:
+    - strider
+  wither:
+    - wither
+  blaze:
+    - blaze
+    

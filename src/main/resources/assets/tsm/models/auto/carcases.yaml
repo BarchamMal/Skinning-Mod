@@ -153,3 +153,52 @@ t_w_c:
     category: wolf
   meatless_wolf_carcase:
     category: wolf
+
+t_mc_c:
+  magma_cube_carcase:
+    category: slimes
+
+t_pi_c:
+  piglin_carcase:
+    category: piglin
+  zombified_piglin_carcase:
+    category: piglin
+
+t_gh_c:
+  ghast_carcase:
+    category: ghast
+
+t_sk_c:
+  wither_skeleton_carcase:
+    category: skeleton
+  stray_carcase:
+    category: skeleton
+  skeleton_carcase:
+    category: skeleton
+
+t_ho_c:
+  hoglin_carcase:
+    category: hoglin
+  skinless_hoglin_carcase:
+    category: hoglin
+  meatless_hoglin_carcase:
+    category: hoglin
+  zoglin_carcase:
+    category: hoglin
+
+t_st_c:
+  strider_carcase:
+    category: strider
+  skinless_strider_carcase:
+    category: strider
+  meatless_strider_carcase:
+    category: strider
+
+t_wi_c:
+  wither_carcase:
+    category: wither
+
+t_bl_c:
+  blaze_carcase:
+    category: blaze
+    

@@ -422,6 +422,114 @@ public class Carcases {
             SKINLESS_WOLF_CARCASE
     );
 
+//                             SKELETON
+// ================================================================>
+
+    public static final CarcaseItem WITHER_SKELETON_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/wither_skeleton_carcase"),
+            Items.AIR
+    );
+    public static final CarcaseItem STRAY_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/stray_carcase"),
+            Items.AIR
+    );
+    public static final CarcaseItem SKELETON_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/skeleton_carcase"),
+            Items.AIR
+    );
+//                              SLIMES
+// ================================================================>
+
+    public static final CarcaseItem MAGMA_CUBE_CARCASE = new CarcaseItem(
+            new Item.Settings().fireproof(),
+            new Identifier(NAMESPACE, "carcases/magma_cube_carcase"),
+            Items.AIR
+    );
+
+//                             PIGLIN
+// ================================================================>
+
+    public static final CarcaseItem PIGLIN_CARCASE = new CarcaseItem(
+            new Item.Settings().fireproof(),
+            new Identifier(NAMESPACE, "carcases/piglin_carcase"),
+            SKELETON_CARCASE
+    );
+    public static final CarcaseItem ZOMBIFIED_PIGLIN_CARCASE = new CarcaseItem(
+            new Item.Settings().fireproof(),
+            new Identifier(NAMESPACE, "carcases/zombified_piglin_carcase"),
+            SKELETON_CARCASE
+    );
+
+//                             GHAST
+// ================================================================>
+
+    public static final CarcaseItem GHAST_CARCASE = new CarcaseItem(
+            new Item.Settings().fireproof(),
+            new Identifier(NAMESPACE, "carcases/ghast_carcase"),
+            Items.AIR
+    );
+
+//                             HOGLIN
+// ================================================================>
+    public static final CarcaseItem MEATLESS_HOGLIN_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/meatless_hoglin_carcase"),
+            Items.AIR
+    );
+    public static final CarcaseItem SKINLESS_HOGLIN_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/skinless_hoglin_carcase"),
+            MEATLESS_HOGLIN_CARCASE
+    );
+    public static final CarcaseItem ZOGLIN_CARCASE = new CarcaseItem(
+            new Item.Settings().fireproof(),
+            new Identifier(NAMESPACE, "carcases/zoglin_carcase"),
+            MEATLESS_HOGLIN_CARCASE
+    );
+    public static final CarcaseItem HOGLIN_CARCASE = new CarcaseItem(
+            new Item.Settings().fireproof(),
+            new Identifier(NAMESPACE, "carcases/hoglin_carcase"),
+            SKINLESS_HOGLIN_CARCASE
+    );
+
+//                             STRIDER
+// ================================================================>
+    public static final CarcaseItem MEATLESS_STRIDER_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/meatless_strider_carcase"),
+            Items.AIR
+    );
+    public static final CarcaseItem SKINLESS_STRIDER_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/skinless_strider_carcase"),
+            MEATLESS_STRIDER_CARCASE
+    );
+    public static final CarcaseItem STRIDER_CARCASE = new CarcaseItem(
+            new Item.Settings().fireproof(),
+            new Identifier(NAMESPACE, "carcases/strider_carcase"),
+            SKINLESS_STRIDER_CARCASE
+    );
+//                             WITHER
+// ================================================================>
+
+    public static final CarcaseItem WITHER_CARCASE = new CarcaseItem(
+            new Item.Settings().fireproof(),
+            new Identifier(NAMESPACE, "carcases/wither_carcase"),
+            Items.AIR
+    );
+//                             BLAZE
+// ================================================================>
+
+    public static final CarcaseItem BLAZE_CARCASE = new CarcaseItem(
+            new Item.Settings().fireproof(),
+            new Identifier(NAMESPACE, "carcases/blaze_carcase"),
+            Items.AIR
+    );
+
+
 
 
 
@@ -513,7 +621,31 @@ public class Carcases {
 
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_wolf_carcase"), MEATLESS_WOLF_CARCASE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "skinless_wolf_carcase"), SKINLESS_WOLF_CARCASE);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "wolf_carcase"), WOLF_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "wolf_carcase"), WOLF_CARCASE);// Registering SLIMES carcases
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "magma_cube_carcase"), MAGMA_CUBE_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "piglin_carcase"), PIGLIN_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "zombified_piglin_carcase"), ZOMBIFIED_PIGLIN_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ghast_carcase"), GHAST_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "wither_skeleton_carcase"), WITHER_SKELETON_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "stray_carcase"), STRAY_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "skeleton_carcase"), SKELETON_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "hoglin_carcase"), HOGLIN_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "skinless_hoglin_carcase"), SKINLESS_HOGLIN_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_hoglin_carcase"), MEATLESS_HOGLIN_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "zoglin_carcase"), ZOGLIN_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "strider_carcase"), STRIDER_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "skinless_strider_carcase"), SKINLESS_STRIDER_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_strider_carcase"), MEATLESS_STRIDER_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "wither_carcase"), WITHER_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "blaze_carcase"), BLAZE_CARCASE);
+
 
 
         ItemGrouper.GroupItem(COW_HIDE, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, Items.LEATHER)});
@@ -603,6 +735,31 @@ public class Carcases {
         ItemGrouper.GroupItem(WOLF_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_FOX_CARCASE)});
         ItemGrouper.GroupItem(SKINLESS_WOLF_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, WOLF_CARCASE)});
         ItemGrouper.GroupItem(MEATLESS_WOLF_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SKINLESS_WOLF_CARCASE)});
+
+        ItemGrouper.GroupItem(MAGMA_CUBE_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_WOLF_CARCASE)});
+
+        ItemGrouper.GroupItem(PIGLIN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MAGMA_CUBE_CARCASE)});
+        ItemGrouper.GroupItem(ZOMBIFIED_PIGLIN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, PIGLIN_CARCASE)});
+
+        ItemGrouper.GroupItem(GHAST_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, ZOMBIFIED_PIGLIN_CARCASE)});
+
+        ItemGrouper.GroupItem(WITHER_SKELETON_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, GHAST_CARCASE)});
+        ItemGrouper.GroupItem(STRAY_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, WITHER_SKELETON_CARCASE)});
+        ItemGrouper.GroupItem(SKELETON_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, STRAY_CARCASE)});
+
+        ItemGrouper.GroupItem(HOGLIN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SKELETON_CARCASE)});
+        ItemGrouper.GroupItem(SKINLESS_HOGLIN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, HOGLIN_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_HOGLIN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SKINLESS_HOGLIN_CARCASE)});
+        ItemGrouper.GroupItem(ZOGLIN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_HOGLIN_CARCASE)});
+
+        ItemGrouper.GroupItem(STRIDER_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, ZOGLIN_CARCASE)});
+        ItemGrouper.GroupItem(SKINLESS_STRIDER_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, STRIDER_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_STRIDER_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SKINLESS_STRIDER_CARCASE)});
+
+        ItemGrouper.GroupItem(WITHER_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_STRIDER_CARCASE)});
+
+        ItemGrouper.GroupItem(BLAZE_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, WITHER_CARCASE)});
+
 
 
     }

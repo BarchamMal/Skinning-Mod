@@ -102,7 +102,7 @@ def create_carcase_models(yaml_file, output_dir, config_file):
                         else:
                             print(f"Creating carcase model: {output_file}")
                         with open(output_file, 'w') as outfile:
-                            outfile.write(json.dumps(item_model))
+                            outfile.write(json.dumps(item_model, indent=2))
                     else:
                         delete(output_file)
         except yaml.YAMLError as exc:
@@ -123,3 +123,4 @@ if __name__ == "__main__":
         os.makedirs(output_dir)
 
     create_carcase_models(yaml_file, output_dir, config_file)
+    

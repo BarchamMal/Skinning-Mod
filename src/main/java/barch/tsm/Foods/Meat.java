@@ -3,6 +3,7 @@ package barch.tsm.Foods;
 import barch.tsm.Glue.ItemGrouped;
 import barch.tsm.Glue.ItemGrouper;
 import net.minecraft.component.type.FoodComponent;
+import net.minecraft.component.type.FoodComponents;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
@@ -95,6 +96,9 @@ public class Meat {
     public static final Item COOKED_GROUND_EQUINE = createFood(GROUND_MEAT_FOOD);
     public static final Item CANINE_STEAK = createFood(GROUND_MEAT_FOOD);
     public static final Item COOKED_CANINE_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item ROTTEN_STEAK = createFood(FoodComponents.ROTTEN_FLESH);
+    public static final Item STRIDER_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_STRIDER_STEAK = createFood(GROUND_MEAT_FOOD);
 
     private static Item createFood(FoodComponent foodComponent) {
         return new Item(new Item.Settings().food(foodComponent));
@@ -173,6 +177,9 @@ public class Meat {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_ground_equine"), COOKED_GROUND_EQUINE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "canine_steak"), CANINE_STEAK);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_canine_steak"), COOKED_CANINE_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "rotten_steak"), ROTTEN_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "strider_steak"), STRIDER_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_strider_steak"), COOKED_STRIDER_STEAK);
 
 
 
@@ -250,6 +257,9 @@ public class Meat {
 
         ItemGrouper.GroupItem(CANINE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_GROUND_EQUINE)});
         ItemGrouper.GroupItem(COOKED_CANINE_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, CANINE_STEAK)});
+        ItemGrouper.GroupItem(ROTTEN_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_CANINE_STEAK)});
+        ItemGrouper.GroupItem(STRIDER_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, ROTTEN_STEAK)});
+        ItemGrouper.GroupItem(COOKED_STRIDER_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, STRIDER_STEAK)});
 
 
 

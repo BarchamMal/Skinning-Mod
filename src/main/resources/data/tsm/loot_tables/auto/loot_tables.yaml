@@ -295,3 +295,71 @@ skinless_wolf_carcase:
 
 meatless_wolf_carcase:
   minecraft:bone: 8
+
+magma_cube_carcase:
+  minecraft:magma_cream: 4
+
+ghast_carcase:
+  minecraft:ghast_tear: 4
+  minecraft:gunpowder: 12
+  tsm:ectoplasm: 16
+
+piglin_carcase:
+  minecraft:gold_ingot: 4
+  minecraft:porkchop: 12
+  tsm:ground_pork: 12
+  tsm:bacon: 4
+  tsm:ham: 2
+  minecraft:leather: 2
+
+skeleton_carcase:
+  minecraft:bone: 10
+  minecraft:bone_meal: 4
+  minecraft:skeleton_skull: [0,1]
+
+stray_carcase:
+  minecraft:bone: 10
+  minecraft:bone_meal: 4
+
+zombified_piglin_carcase:
+  minecraft:gold_ingot: 4
+  tsm:rotten_steak: 12
+  minecraft:rotten_flesh: 12
+
+meatless_hoglin_carcase:
+  minecraft:bone: 24
+
+skinless_hoglin_carcase:
+  minecraft:porkchop: 64
+  tsm:rib: 2
+  tsm:ground_pork: 64
+  tsm:bacon: 24
+  tsm:ham: 4
+
+hoglin_carcase:
+  tsm:cow_hide: 1
+
+wither_skeleton_carcase:
+  tsm:wither_bone: 16
+  minecraft:wither_skeleton_skull: 1
+
+strider_carcase:
+  tsm:soft_hide: 1
+
+skinless_strider_carcase:
+  tsm:strider_steak: 16
+  minecraft:string: 8
+
+meatless_strider_carcase:
+  minecraft:bone: 8
+
+wither_carcase:
+  tsm:wither_bone: 16
+  minecraft:wither_skeleton_skull: [1,3]
+  minecraft:nether_star: 1
+  minecraft:soul_sand: [1,4]
+
+blaze_carcase:
+  minecraft:blaze_rod: 12
+  minecraft:blaze_powder: [1,5]
+  

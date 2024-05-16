@@ -8,7 +8,8 @@
     "PigEntityMixin",
     "SheepEntityMixin",
     "TheSkinningModMixin",
-    "BeeEntityMixin"
+    "BeeEntityMixin",
+    "WitherEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
