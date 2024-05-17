@@ -202,3 +202,30 @@ t_bl_c:
   blaze_carcase:
     category: blaze
     
+t_fr_c:
+  frog_carcase:
+    category: frog
+
+t_a_c:
+  axolotl_carcase:
+    category: axolotl
+
+t_d_c:
+  dolphin_carcase:
+    category: dolphin
+  meatless_dolphin_carcase:
+    category: dolphin
+
+t_g_c:
+  guardian_carcase:
+    category: guardian
+  scaled_guardian_carcase:
+    category: guardian
+  meatless_guardian_carcase:
+    category: guardian
+  elder_guardian_carcase:
+    category: elder_guardian
+  scaled_elder_guardian_carcase:
+    category: elder_guardian
+  meatless_elder_guardian_carcase:
+    category: elder_guardian

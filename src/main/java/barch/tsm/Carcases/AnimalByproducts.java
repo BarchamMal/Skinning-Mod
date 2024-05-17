@@ -20,6 +20,9 @@ public class AnimalByproducts {
     public static final Item FUR = new Item(new Item.Settings());
     public static final Item ECTOPLASM = new Item(new Item.Settings());
     public static final Item WITHER_BONE = new Item(new Item.Settings());
+    public static final Item WHITE_SCUTE = new Item(new Item.Settings());
+    public static final Item GUARDIAN_SPIKE = new Item(new Item.Settings());
+    public static final Item ELDER_GUARDIAN_SPIKE = new Item(new Item.Settings());
 
     public static final Item STINGER = new Item(new Item.Settings());
 
@@ -33,6 +36,9 @@ public class AnimalByproducts {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "fur"), FUR);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ectoplasm"), ECTOPLASM);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "wither_bone"), WITHER_BONE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "white_scute"), WHITE_SCUTE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "guardian_spike"), GUARDIAN_SPIKE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "elder_guardian_spike"), ELDER_GUARDIAN_SPIKE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "stinger"), STINGER);
 
         ItemGrouper.GroupItem(FISH_SCALES, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, Items.AIR)});
@@ -43,7 +49,10 @@ public class AnimalByproducts {
         ItemGrouper.GroupItem(FUR, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, LARGE_SCUTE)});
         ItemGrouper.GroupItem(ECTOPLASM, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, FUR)});
         ItemGrouper.GroupItem(WITHER_BONE, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, ECTOPLASM)});
-        ItemGrouper.GroupItem(STINGER, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, WITHER_BONE)});
+        ItemGrouper.GroupItem(WHITE_SCUTE, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, WITHER_BONE)});
+        ItemGrouper.GroupItem(GUARDIAN_SPIKE, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, WHITE_SCUTE)});
+        ItemGrouper.GroupItem(ELDER_GUARDIAN_SPIKE, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, GUARDIAN_SPIKE)});
+        ItemGrouper.GroupItem(STINGER, new ItemGrouped[]{new ItemGrouped(BYPRODUCTS_GROUP, ELDER_GUARDIAN_SPIKE)});
 
     }
 

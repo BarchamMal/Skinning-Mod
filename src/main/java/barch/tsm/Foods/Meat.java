@@ -94,11 +94,20 @@ public class Meat {
     public static final Item COOKED_GROUND_LLAMA = createFood(GROUND_MEAT_FOOD);
     public static final Item GROUND_EQUINE = createFood(GROUND_MEAT_FOOD);
     public static final Item COOKED_GROUND_EQUINE = createFood(GROUND_MEAT_FOOD);
+
     public static final Item CANINE_STEAK = createFood(GROUND_MEAT_FOOD);
     public static final Item COOKED_CANINE_STEAK = createFood(GROUND_MEAT_FOOD);
     public static final Item ROTTEN_STEAK = createFood(FoodComponents.ROTTEN_FLESH);
     public static final Item STRIDER_STEAK = createFood(GROUND_MEAT_FOOD);
     public static final Item COOKED_STRIDER_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item DOLPHIN_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_DOLPHIN_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item GUARDIAN_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_GUARDIAN_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item AXOLOTL_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item COOKED_AXOLOTL_STEAK = createFood(GROUND_MEAT_FOOD);
+    public static final Item FROG_LEG = createFood(RARE_MEAT_FOOD);
+    public static final Item COOKED_FROG_LEG = createFood(COOKED_RARE_MEAT_FOOD);
 
     private static Item createFood(FoodComponent foodComponent) {
         return new Item(new Item.Settings().food(foodComponent));
@@ -180,6 +189,14 @@ public class Meat {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "rotten_steak"), ROTTEN_STEAK);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "strider_steak"), STRIDER_STEAK);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_strider_steak"), COOKED_STRIDER_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "dolphin_steak"), DOLPHIN_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_dolphin_steak"), COOKED_DOLPHIN_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "guardian_steak"), GUARDIAN_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_guardian_steak"), COOKED_GUARDIAN_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "axolotl_steak"), AXOLOTL_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_axolotl_steak"), COOKED_AXOLOTL_STEAK);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "frog_leg"), FROG_LEG);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_frog_leg"), COOKED_FROG_LEG);
 
 
 
@@ -261,7 +278,14 @@ public class Meat {
         ItemGrouper.GroupItem(STRIDER_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, ROTTEN_STEAK)});
         ItemGrouper.GroupItem(COOKED_STRIDER_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, STRIDER_STEAK)});
 
-
+        ItemGrouper.GroupItem(DOLPHIN_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_STRIDER_STEAK)});
+        ItemGrouper.GroupItem(COOKED_DOLPHIN_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, DOLPHIN_STEAK)});
+        ItemGrouper.GroupItem(GUARDIAN_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_DOLPHIN_STEAK)});
+        ItemGrouper.GroupItem(COOKED_GUARDIAN_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GUARDIAN_STEAK)});
+        ItemGrouper.GroupItem(AXOLOTL_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_DOLPHIN_STEAK)});
+        ItemGrouper.GroupItem(COOKED_AXOLOTL_STEAK, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GUARDIAN_STEAK)});
+        ItemGrouper.GroupItem(FROG_LEG, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, COOKED_DOLPHIN_STEAK)});
+        ItemGrouper.GroupItem(COOKED_FROG_LEG, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, GUARDIAN_STEAK)});
 
     }
 }

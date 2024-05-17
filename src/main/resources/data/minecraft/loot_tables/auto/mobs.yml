@@ -72,4 +72,14 @@ loot_tables:
     - wither
   blaze:
     - blaze
+  frog:
+    - frog
+  axolotl:
+    - axolotl
+  guardian:
+    - guardian
+  elder_guardian:
+    - elder_guardian
+  dolphin:
+    - dolphin
     

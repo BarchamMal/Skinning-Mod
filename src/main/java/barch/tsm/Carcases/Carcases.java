@@ -528,6 +528,73 @@ public class Carcases {
             new Identifier(NAMESPACE, "carcases/blaze_carcase"),
             Items.AIR
     );
+//                             AXOLOTL
+// ================================================================>
+
+    public static final CarcaseItem AXOLOTL_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/axolotl_carcase"),
+            Items.AIR
+    );
+//                              FROG
+// ================================================================>
+
+    public static final CarcaseItem FROG_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/frog_carcase"),
+            Items.AIR
+    );
+//                             DOLPHIN
+// ================================================================>
+
+    public static final CarcaseItem MEATLESS_DOLPHIN_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/meatless_dolphin_carcase"),
+            Items.AIR
+    );
+    public static final CarcaseItem DOLPHIN_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/dolphin_carcase"),
+            MEATLESS_DOLPHIN_CARCASE
+    );
+//                             GUARDIAN
+// ================================================================>
+
+    public static final CarcaseItem MEATLESS_GUARDIAN_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/meatless_guardian_carcase"),
+            Items.AIR
+    );
+    public static final CarcaseItem SCALED_GUARDIAN_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/scaled_guardian_carcase"),
+            MEATLESS_GUARDIAN_CARCASE
+    );
+    public static final CarcaseItem GUARDIAN_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/guardian_carcase"),
+            SCALED_GUARDIAN_CARCASE
+    );
+//                          ELDER GUARDIAN
+// ================================================================>
+
+    public static final CarcaseItem MEATLESS_ELDER_GUARDIAN_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/meatless_elder_guardian_carcase"),
+            Items.AIR
+    );
+    public static final CarcaseItem SCALED_ELDER_GUARDIAN_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/scaled_elder_guardian_carcase"),
+            MEATLESS_ELDER_GUARDIAN_CARCASE
+    );
+    public static final CarcaseItem ELDER_GUARDIAN_CARCASE = new CarcaseItem(
+            new Item.Settings(),
+            new Identifier(NAMESPACE, "carcases/elder_guardian_carcase"),
+            SCALED_ELDER_GUARDIAN_CARCASE
+    );
+
+
 
 
 
@@ -621,7 +688,7 @@ public class Carcases {
 
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_wolf_carcase"), MEATLESS_WOLF_CARCASE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "skinless_wolf_carcase"), SKINLESS_WOLF_CARCASE);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "wolf_carcase"), WOLF_CARCASE);// Registering SLIMES carcases
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "wolf_carcase"), WOLF_CARCASE);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "magma_cube_carcase"), MAGMA_CUBE_CARCASE);
 
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "piglin_carcase"), PIGLIN_CARCASE);
@@ -645,6 +712,21 @@ public class Carcases {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "wither_carcase"), WITHER_CARCASE);
 
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "blaze_carcase"), BLAZE_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "axolotl_carcase"), AXOLOTL_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "frog_carcase"), FROG_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "dolphin_carcase"), DOLPHIN_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_dolphin_carcase"), MEATLESS_DOLPHIN_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "guardian_carcase"), GUARDIAN_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "scaled_guardian_carcase"), SCALED_GUARDIAN_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_guardian_carcase"), MEATLESS_GUARDIAN_CARCASE);
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "elder_guardian_carcase"), ELDER_GUARDIAN_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "scaled_elder_guardian_carcase"), SCALED_ELDER_GUARDIAN_CARCASE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "meatless_elder_guardian_carcase"), MEATLESS_ELDER_GUARDIAN_CARCASE);
 
 
 
@@ -759,6 +841,21 @@ public class Carcases {
         ItemGrouper.GroupItem(WITHER_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_STRIDER_CARCASE)});
 
         ItemGrouper.GroupItem(BLAZE_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, WITHER_CARCASE)});
+
+        ItemGrouper.GroupItem(AXOLOTL_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, BLAZE_CARCASE)});
+
+        ItemGrouper.GroupItem(FROG_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, AXOLOTL_CARCASE)});
+
+        ItemGrouper.GroupItem(DOLPHIN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, FROG_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_DOLPHIN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, DOLPHIN_CARCASE)});
+
+        ItemGrouper.GroupItem(GUARDIAN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_DOLPHIN_CARCASE)});
+        ItemGrouper.GroupItem(SCALED_GUARDIAN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, GUARDIAN_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_GUARDIAN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SCALED_GUARDIAN_CARCASE)});
+
+        ItemGrouper.GroupItem(ELDER_GUARDIAN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, MEATLESS_GUARDIAN_CARCASE)});
+        ItemGrouper.GroupItem(SCALED_ELDER_GUARDIAN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, ELDER_GUARDIAN_CARCASE)});
+        ItemGrouper.GroupItem(MEATLESS_ELDER_GUARDIAN_CARCASE, new ItemGrouped[]{new ItemGrouped(CARCASES_GROUP, SCALED_ELDER_GUARDIAN_CARCASE)});
 
 
 

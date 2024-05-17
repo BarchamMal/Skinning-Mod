@@ -1,3 +1,4 @@
+- axolotl_steak
 - bacon
 - bear_hide
 - bear_steak
@@ -10,6 +11,7 @@
 - chisel
 - cod_steak
 - colorful_fish_scales
+- cooked_axolotl_steak
 - cooked_bacon
 - cooked_bear_steak
 - cooked_bee_steak
@@ -19,7 +21,9 @@
 - cooked_chicken_leg
 - cooked_chicken_wing
 - cooked_cod_steak
+- cooked_dolphin_steak
 - cooked_equine_steak
+- cooked_frog_leg
 - cooked_glow_squid_tentacle
 - cooked_ground_bear
 - cooked_ground_beef
@@ -28,6 +32,7 @@
 - cooked_ground_llama
 - cooked_ground_mutton
 - cooked_ground_pork
+- cooked_guardian_steak
 - cooked_ham
 - cooked_liver
 - cooked_llama_steak
@@ -43,11 +48,14 @@
 - cooked_turtle_steak
 - cow_hide
 - down
+- dolphin_steak
 - diamond_upgrade_kit
 - ectoplasm
+- elder_guardian_spike
 - empty_upgrade_kit
 - equine_steak
 - fish_scales
+- frog_leg
 - fur
 - glow_squid_tentacle
 - glue
@@ -59,6 +67,8 @@
 - ground_llama
 - ground_mutton
 - ground_pork
+- guardian_steak
+- guardian_spike
 - ham
 - intestine
 - iron_upgrade_kit
@@ -98,5 +108,6 @@
 - tongue
 - tropical_fish_steak
 - turtle_steak
+- white_scute
 - wither_bone
 - woolly_hide
