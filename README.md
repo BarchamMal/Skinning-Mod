@@ -6,7 +6,7 @@
 
  And as the name implies: It complicates minecraft.
 
- ##  F.A.Q
+ ##  F.A.Q.
   - Q: What is even the use of that?
   - A: Let's say you're running through a cavern farming enemies, now you can carry a stack of each carcase instead of each of their drops individually.
 
@@ -25,11 +25,11 @@
  - Q: May I use this mod in my modpack?
  - A: Ahh, yes.
 
- - Q: Will you port this mod to Forge?
- - A: No. I don't plan to.
+ + Q: Will you port this mod to Forge?
+ + A: No. I don't plan to.
 
- + Q: Was this mod inspired by, or is it partially a copy of Butcher's Delight?
- + A: Actually, no. I found and played Butcher's Delight after a couples of months into developing this mod. (The mod did exist before the repo)
+ - Q: Was this mod inspired by, or is it partially a copy of Butcher's Delight?
+ - A: Actually, no. I found and played Butcher's Delight after a couples of months into developing this mod. (The mod did exist before the repo)
 
 
 ## Contributing
