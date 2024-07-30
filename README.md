@@ -1,3 +1,5 @@
+[![Curseforge Downloads](https://cf.way2muchnoise.eu/1074504.svg)](https://www.curseforge.com/minecraft/mc-mods/the-skinning-mod)
+
 # The-Skinning-Mod
  This mod allows you to skin creatures instead of getting their drops directly.
  It also adds a lot of byproducts from skinning creatures.
@@ -21,11 +23,7 @@
   + A: For another thing, things are done a bit more realistic. i.e. you get appropriate amounts of food from animals, bones or bonemeal from animals, byproducts like scutes from turtles or spikes from pufferfish.
 
  - Q: May I use this mod in my modpack?
- - A: Well, it's not on Curseforge, but if you want to compile it yourself and use it anyways be my guest. Just credit me and provide a link to this repo.
-
- + Q: Will you port this mod to X version?
- + A: If X is before the current mod version then no, I don't plan to.
- + A: If X is after the current mod version then yes, when the Fabric APIs are updated.
+ - A: Ahh, yes.
 
  - Q: Will you port this mod to Forge?
  - A: No. I don't plan to.
